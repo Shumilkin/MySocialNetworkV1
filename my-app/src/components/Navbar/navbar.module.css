@@ -1,0 +1,21 @@
+
+.nav {
+    grid-area: n;
+
+border-radius: 1px solid red;
+}
+.sidebarButton{
+    text-decoration: none;
+    color: grey;
+    height: 40px;
+    width:100px;
+}
+.sidebarButton :hover {
+    background-color: grey;
+    color:red;
+    width:100px;
+}
+.sidebarLogo{
+    width:50px;
+
+border-radius: 50%;}

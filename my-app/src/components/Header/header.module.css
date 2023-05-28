@@ -1,0 +1,32 @@
+.header {
+    grid-area: h;
+    background-color: lightblue;
+    height: 75px;
+
+}
+.mainlogo{
+    width:50px;
+    margin-left: 50px;
+}
+.mainlogo img {
+    display: block;
+
+}
+.logoText{
+    font-weight: bold;
+    font-size: 25px;
+}
+.headerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+}
+.child-active {
+    flex-basis: 50%;
+}
+.profileLogo{
+    height:45px;
+    border-radius: 50%;
+
+}

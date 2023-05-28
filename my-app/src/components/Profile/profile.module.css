@@ -1,0 +1,233 @@
+.profileBg {
+    background-color: #f5f5f5;
+
+
+}
+
+.area {
+
+    grid-area: c;
+    color: red;
+}
+
+.profileBG {
+    height: 200px;
+    width: 100%;
+    background-size: contain;
+}
+
+.container {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 50px;
+}
+
+.containerNonColor {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+
+}
+
+.containerHalfLeft {
+    position: relative;
+    width: 97%;
+    margin: 0 auto;
+    margin-left: 0px;
+    background-color:white;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 30px;
+}
+.containerHalfLeftNonColor {
+    position: relative;
+    width: 97%;
+    margin: 0 auto;
+    margin-left: 0px;
+
+    border-radius: 7px;
+    margin-bottom: 50px;
+
+}
+
+.containerHalfRight {
+    position: relative;
+    width: 97%;
+    margin: 0 auto;
+    margin-right: 0px;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+.containerCarousel {
+    margin-top: 25px;
+    position: relative;
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 7px;
+
+
+.info {
+    position: absolute;
+    top: 75px;
+    border: 1px solid red;
+}
+
+}
+.profilePhoto {
+    width: 180px;
+    border-radius: 10px;
+    margin-top: -100px;
+}
+
+.profileIcons {
+    font-size: 25px;
+    font-weight: 100;
+
+    margin: 3px;
+}
+
+.profileNetwork {
+    font-size: 15px;
+    height: 25;
+    width: 25;
+    margin: 10px;
+}
+
+.numbersInfo {
+    color: grey;
+    font-size: 15px;
+    font-size: bold;
+}
+
+.carousel {
+
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    color: grey;
+}
+
+.profileCarouselItem {
+
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+    height: 16vh;
+
+
+}
+
+.carouselItemLogo {
+    position: relative;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: grey;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.carouselItemLogo span {
+    margin: 0;
+    margin-top: 90%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+}
+
+.profileImageContainer {
+    position: relative;
+
+    padding: 0px;
+    margin: auto;
+    width: 150px;
+}
+
+.profileImage {
+
+    display: inline-block;
+    padding: 0;
+    position: absolute;
+    top: -200px;
+    right: -30px;
+
+
+}
+
+input[type=file] {
+    display: none;
+}
+
+label {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: #23a6d5;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.editStatus {
+    display: inline;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.profilePostLogo {
+    width: 70px;
+
+    border-radius: 50%;
+}
+.postContainer{
+    margin:0;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding:20px;
+}
+.postUser{
+    font-size: 20px;
+}
+.postTime{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.postData{
+    font-size:20px;
+    color:grey;
+    margin-top:20px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid lightgrey;
+}
+.postLike{
+    font-weight: 500;
+    color:grey;
+}
+.postComment{
+    padding-left: 15px;
+    color:grey;
+}
+.postComment span{
+    font-weight: 500;
+    margin-right: 5px;
+}
+
