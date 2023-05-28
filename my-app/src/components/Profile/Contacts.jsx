@@ -11,28 +11,60 @@ import Status from "./Status/Status";
 import {useState} from "react";
 import {AiOutlineEdit} from "react-icons/ai";
 import ProfileContactsForm from "./Form/ProfileContactsForm";
+import {HiOutlinePencilAlt} from "react-icons/hi";
 
 
 const ProfileContacts = (props) => {
     const [count, setCount] = useState(0);
     const [count2, setCount2] = useState(0);
+    let contacts = ''
 
+    for (var key in props.list) {
+        const site = "https://" + key + ".com"
+        contacts = [...contacts,
+            <div className={"row  "}>
+                <div className={"col-2 m-1"}>
+                    <SocialIcon style={{height: 50, width: 50}} url={site}/>
+                </div>
+                <div className={"col-9  m-2"}>
+                    <div className={"input-group "}><span className="input-group-text"
+                                                          id="basic-addon1"> {props.list[key] != null ? props.list[key] : "---"}</span>
+                    </div>
+                </div>
+            </div>
+        ]
+    }
     return <div>
 
-        <div>
-            <u>Contacts:</u>
-            <button onClick={() => setCount(count + 1)}>
+        <div className={"pb-4  "}>
+            <div className={"row row-cols-auto text-center"}>
+                <div className={"col"}><u className={s.header}>Contacts:</u></div>
+                <div className={"col"} onClick={() => setCount(count + 1)}>
+                    {/* {count % 2 ? "Save" : "Edit"}>*/}
+                    <div className={s.headerControl}><HiOutlinePencilAlt style={{height: 35, width: 35}}/></div>
+
+                </div>
+            </div>
+            {/*
+          <div className={s.headerControl} onClick={() => setCount(count + 1)}>
+              {count % 2 ? "Save" : "Edit"}>
+              <HiOutlinePencilAlt  style={{height: 35, width: 35}}/>
+          </div>*/}
+
+            {/* <button onClick={() => setCount(count + 1)}>
                 {count % 2 ? "Save" : "Edit"}
-            </button>
+            </button>*/}
         </div>
 
 
         {count % 2 ? <div>
-            <ProfileContactsForm list={props.list} contacts={props.contacts}  setProfileContacts={props.setProfileContacts}/>
-            {/*<button onClick={() => props.setProfileContacts('1')}>
+                <ProfileContactsForm list={props.list} contacts={props.contacts}
+                                     setProfileContacts={props.setProfileContacts}/>
+                {/*<button onClick={() => props.setProfileContacts('1')}>
                 sd
             </button>*/}
-        </div> : <div>{props.contacts}</div>}
+            </div> :
+            <div>{contacts}</div>}
 
     </div>
 
