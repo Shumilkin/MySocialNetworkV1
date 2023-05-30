@@ -21,7 +21,6 @@ const ProfilePost = (props) => {
             <div className="ms-auto p-2">
                 <NavDropdown
                     title=""
-
                 >
                     <NavDropdown.Item href="#action3">
                        Add favorite

@@ -33,25 +33,16 @@ const ProfileInfo = (props) => {
 
 
     return <div classname={s.area}>
-
-        {/*<div className={"row align-items-center"}>
-            <div className={"col-4 text-center" }>ser</div>
-            <div className={"col-4 text-center"}>ser</div>
-            <div className={"col-4 text-center"}>ser</div>
-        </div>*/}
         <img className={s.profileBG}
              src="https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg"/>
         <ProfileInfoTop photo={props.profileInfo.photos.small} setUserPhoto={props.setUserPhoto}
                         fullName={props.profileInfo.fullName} status={props.status}
                         setStatus={props.setStatus} status={props.status}/>
-
         <div className={s.containerCarousel}>
             <div className={s.carousel}>
                 <ReactSlickDemo/>
             </div>
         </div>
-
-
         {/*
 
         {count2 % 2 ?
@@ -64,8 +55,6 @@ const ProfileInfo = (props) => {
             </button>}
 */}
         <div className={s.containerNonColor}>
-
-
             <div className={"row"}>
                 <div className={"col-8"}>
                     <div className={s.containerHalfLeft}>
@@ -73,14 +62,11 @@ const ProfileInfo = (props) => {
                     </div>
                     <div className={s.containerHalfLeftNonColor}>
                         <ProfilePosts postsData={props.postsData} setUserProfilePost={props.setUserProfilePost}/>
-
                     </div>
-
-
                 </div>
                 <div className={"col-4"}>
                     <div className={s.containerHalfRight}>
-                        <ProfileContacts setProfileContacts={props.setProfileContacts} list={list} contacts={contacts}/>{/*
+                        <ProfileContacts setProfileContacts={props.setProfileContacts} profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>{/*
                         Id :{props.profileInfo.userId}
                         Looking for a job :{props.profileInfo.lookingForAJobDescription}*/}
                     </div>

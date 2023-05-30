@@ -16,6 +16,8 @@ import { useEffect  } from 'react';
 import LoginPage from "./components/Login/LoginPage";
 import {getAuthData, setAuthData, takeAuthData, takeCaptcha, takelogoutData} from "./redux/auth-reducer";
 import ReactSlickDemo from './components/Profile/ProfileCarousel'
+import Messages from "./components/Messages/Messages";
+import Messages2 from "./components/Messages/Messages2";
 const CountStateContext = React.createContext()
 
 
@@ -58,10 +60,10 @@ function App(props) {
                     <Sidebar/>
                     <Routes>
                         <Route path='/:id' element={<ProfileContainer/>}/>
-                        <Route path='/messages' element={<MessagesContainer/>}/>
+                        <Route path='/messages' element={<Messages/>}/>
                         <Route path='/friends' element={<FriendsContainer/>}/>
                         <Route path='/music' element={<Music/>}/>
-                        <Route path='/settings' element={<ReactSlickDemo/>}/>
+                        <Route path='/settings' element={<Messages2/>}/>
                         <Route path='/login' element={<LoginPage />}/>
                     </Routes>
                 </div>

@@ -2,3 +2,52 @@
     grid-area: c;
     color: red;
 }
+.messagesBG{
+    background-color: #f5f5f5;
+}
+.usersContainer{
+border: 1px solid red;
+    height:60vh;
+    overflow: scroll;
+}
+.containerHalfLeft {
+    position: relative;
+    width: 97%;
+    margin: 0 auto;
+    margin-left: 0px;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 30px;
+}
+.containerHalfRight {
+    position: relative;
+    width: 98%;
+    margin: 0 auto;
+    margin-left: 0px;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 30px;
+}
+.postContainer {
+    margin: 0;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.profileMessageLogo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+.messageUser{
+font-size: 20px;
+    color:#0f0629;
+}
+.messageTime{
+    font-size:12px;
+    color: #2f2b38;
+}
+
