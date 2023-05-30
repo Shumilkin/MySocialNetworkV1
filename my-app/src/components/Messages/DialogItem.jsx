@@ -1,6 +1,9 @@
 import s from "./messages.module.css"
 import profileLogo from "../../media/uzerlogo.png"
 import * as React from "react";
+import BackToUp from "@uiw/react-back-to-top";
+import Scroll from "./MessagesContainer";
+import UserItem from "./UserItem";
 
 const DialogItem = (props) => {
 
@@ -17,13 +20,10 @@ const DialogItem = (props) => {
     </div>
 
     return <div className={s.usersContainer}>
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
+       {/* <BackToUp />*/}
+{/*<Scroll/>*/}
+        {props.data}
+        {props.data}
         {user}
     </div>
 }

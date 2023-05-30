@@ -16,12 +16,13 @@ import {FcLike} from "react-icons/fc";
 import {FaRegCommentDots} from "react-icons/fa";
 import DialogsItem from "./DialogItem";
 import DialogItem from "./DialogItem";
+import UserItem from "./UserItem";
 const Messages = (props) =>{
     const [value, setValue] = useState(0);
    let  DialogsList =  <ul>
        {props.dialogsData.map(item => (
-              <li key={item.id} onClick={()=> {setValue(item.id)}}>{item.user} </li>
-
+             /* <li key={item.id} onClick={()=> {setValue(item.id)}}>{item.user} </li>*/
+           <UserItem  onClick={()=> {setValue(item.id)}} name={item.user}/>
        ))}
 
    </ul>
@@ -43,9 +44,9 @@ const Messages = (props) =>{
                     </Button>
                 </div>
             </div>
-            <DialogItem/>
+            <DialogItem data={DialogsList}/>
             <div className={s.containerHalfLeft}>
-                {DialogsList}
+
 
             </div>
 
@@ -53,29 +54,22 @@ const Messages = (props) =>{
         <div className={"col-8"}>
             <div className={s.containerHalfRight}>
                 <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
+
             </div>
             <div className={s.containerHalfRight}>
-                <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
+                <MessagesForm setDialogsMessage={props.getDialogsMessage} value={value}/>
+
             </div>
+            {/*<div className={s.containerHalfRight}>
+                <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
+            </div>*/}
 
         </div>
 
     </div>
 
-        <div className="container">
+        
 
-            <div className="row align-items-center" >
-                <div className="col-sm-3">
-                    {DialogsList}
-
-                </div>
-                <div className="col-sm-9">
-                        <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
-                </div>
-
-            </div>
-        </div>
-        <MessagesForm setDialogsMessage={props.getDialogsMessage} value={value}/>
 </div>
     </div>
 }
