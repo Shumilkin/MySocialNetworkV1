@@ -5,6 +5,7 @@ import MessagesForm from "./MessagesForm/MessagesForm";
 import {useState} from "react";
 
 const MessagesList = (props) =>{
+
     let  MessagesListData =  <ul>
         {props.messagesData[props.value].messages.map(item => (
             <div>

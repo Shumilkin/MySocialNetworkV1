@@ -27,8 +27,13 @@
     margin-left: 0px;
     background-color: white;
     border-radius: 7px;
-    margin-bottom: 15px;
-    padding: 30px;
+    margin-bottom: 5px;
+    padding:15px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.search{
+    margin-left:10px;
 }
 .containerHalfRight {
     position: relative;
@@ -47,6 +52,18 @@
     border-radius: 5px;
     padding: 10px;
 }
+.userDialogContainer {
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.userDialogContainer img{
+   width:40px;
+    height:40px;
+    border-radius:50%;
+}
 .profileMessageLogo{
     width:60px;
     height:60px;
@@ -55,6 +72,7 @@
 .messageUser{
 font-size: 20px;
     color:#0f0629;
+margin-top: -5px;
 }
 .messageTime{
     font-size:12px;

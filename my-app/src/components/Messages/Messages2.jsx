@@ -2,21 +2,15 @@ import * as React from "react";
 import s from './messages.module.css'
 import {connect} from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../../media/logo/Zeronet_logo.png";
 import {Button} from "react-bootstrap";
 import MessagesForm from "./MessagesForm/MessagesForm";
 import {deleteMessage, getDialogsMessage} from "../../redux/messages-reduser";
 import {useState} from "react";
 import MessagesList from "./MessagesList";
-import ProfilePost from "../Profile/Status/ProfilePosts/Post";
-import ProfilePostsForm from "../Profile/Form/ProfilePostsForm";
 import Form from "react-bootstrap/Form";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import {FcLike} from "react-icons/fc";
-import {FaRegCommentDots} from "react-icons/fa";
-import DialogsItem from "./DialogItem";
 import DialogItem from "./DialogItem";
 import UserItem from "./UserItem";
+import profileLogo from "../../media/uzerlogo.png";
 const Messages = (props) =>{
     const [value, setValue] = useState(0);
    let  DialogsList =  <ul>
@@ -26,6 +20,7 @@ const Messages = (props) =>{
        ))}
 
    </ul>
+
   /*  let  MessagesList =  <ul>
         {props.messagesData[value].messages.map(item => (
             <li key={item.id}>{item.message} </li>
@@ -39,19 +34,29 @@ const Messages = (props) =>{
                 <div className={"d-flex"}>
                     <Form.Control  placeholder="Search ..."  type="textarea"
                                    name="name" className={"p-1"}/>
-                    <Button variant="primary" type="submit">
+                    <Button className={s.search} variant="primary" type="submit">
                         Go
                     </Button>
                 </div>
             </div>
             <DialogItem data={DialogsList}/>
             <div className={s.containerHalfLeft}>
-
-
             </div>
-
         </div>
         <div className={"col-8"}>
+
+                <div className={s.userDialogContainer} onClick={props.onClick}>
+                    <div className={"d-flex"}>
+                        <div className={"p-1"}>
+                            <img src={profileLogo} />
+                        </div>
+                        <div className={"p-2"}>
+                            <div  className={s.messageUser}>{props.dialogsData[value].user}</div>
+
+                        </div>
+                    </div>
+                </div>
+
             <div className={s.containerHalfRight}>
                 <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
 
@@ -73,6 +78,7 @@ const Messages = (props) =>{
 </div>
     </div>
 }
+
 const mapStateToProps = (state) => {
 
     return {
