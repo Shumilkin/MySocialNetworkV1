@@ -24,7 +24,7 @@ const DialogItem = (props) => {
 {/*<Scroll/>*/}
         {props.data}
         {props.data}
-        {user}
+       {/* {user}*/}
     </div>
 }
 export default DialogItem

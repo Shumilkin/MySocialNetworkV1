@@ -8,24 +8,60 @@ const initialState = {
     dialogsData: [
         {id: 0, user: 'Nikolay'},
         {id: 1, user: 'OLeg'},
-        {id: 2, user: 'Ivan'}
+        {id: 2, user: 'Ivan'},
+        {id:3, user: 'Irina'},
+        {id: 4, user: 'Anton'},
+        {id: 5, user: 'Olga'}
     ],
     messagesData: [
         {
             id: 1, messages: [
-                {messageId: 1, message: 'lol'},
-                {messageId: 2, message: 'kek'}]
+                {messageId: 1, message: 'True! Just when I was feeling happy that the Avengers got rid of Thanos for good, the next moment I was bawling my eyes out seeing Iron Man had sacrificed himself to save the world and everyone else.'},
+                {messageId: 2, message: 'My sister took me to see the movie as soon as it was released. Both me and my sister have been great fans of Avengers since childhood.'},
+                {messageId: 3, message: ' Oh I see. The movie stood up to all the expectations that the audience had after watching the trailer. In fact I would say the movie surpassed expectations.'},
+                {messageId: 4, message: ' We should make use of this trip to learn the maximum possible about the places we are visiting.'}]
+
         },
         {
             id: 2, messages: [
-                {messageId: 1, message: 'ppp'},
-                {messageId: 2, message: 'aaa'}]
+                {messageId: 1, message: 'Hey, Marvin. My weekend was great. I watched a great movie.'},
+                {messageId: 2, message: 'Oh really? What was the name of the movie you watched?'},
+                {messageId: 3, message: ' I watched Avengers Endgame. It is the last movie of the Avengers.'}
+            ]
+
+
         },
         {
             id: 3, messages: [
-                {messageId: 1, message: '123'},
-                {messageId: 2, message: '678'}]
+                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
+                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
+                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
         },
+        {
+            id: 4, messages: [
+                {messageId: 1, message: 'True! Just when I was feeling happy that the Avengers got rid of Thanos for good, the next moment I was bawling my eyes out seeing Iron Man had sacrificed himself to save the world and everyone else.'},
+                {messageId: 2, message: 'My sister took me to see the movie as soon as it was released. Both me and my sister have been great fans of Avengers since childhood.'},
+                {messageId: 3, message: ' Oh I see. The movie stood up to all the expectations that the audience had after watching the trailer. In fact I would say the movie surpassed expectations.'},
+                {messageId: 4, message: ' We should make use of this trip to learn the maximum possible about the places we are visiting.'}]
+        },
+        {
+            id: 5, messages: [
+                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
+                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
+                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
+        },
+        {
+            id: 6, messages: [
+                {messageId: 1, message: 'Hey, Marvin. My weekend was great. I watched a great movie.'},
+                {messageId: 2, message: 'Oh really? What was the name of the movie you watched?'},
+                {messageId: 3, message: ' I watched Avengers Endgame. It is the last movie of the Avengers.'}]
+        },
+        {
+            id: 7, messages: [
+                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
+                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
+                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
+        }
     ]
 
 }

@@ -7,7 +7,21 @@
 }
 .usersContainer{
 
-    height:60vh;
+    height:75vh;
+    overflow: auto;
+    white-space: normal;
+&::-webkit-scrollbar {
+     -webkit-appearance: none;
+     width: 7px;
+     background: #00000038;
+ }
+&::-webkit-scrollbar-thumb {
+     border-radius: 4px;
+     background-color: #595959;
+ }
+}
+.messagesContainer{
+    height:56vh;
     overflow: auto;
     white-space: normal;
 &::-webkit-scrollbar {
@@ -78,4 +92,27 @@ margin-top: -5px;
     font-size:12px;
     color: #2f2b38;
 }
+.messageLogo{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+.messageItemContainer{
 
+    margin-top: 10px;
+
+}
+.messageDataContainer{
+    font-size: 12px;
+    margin-top: 10px;
+    color: white;
+    background-color: royalblue;
+    border-radius: 10px;
+    padding: 0;
+}
+.messageTextData{
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
