@@ -17,9 +17,9 @@ const Messages = (props) => {
     let DialogsList = <ul>
         {props.dialogsData.map(item => (
             /* <li key={item.id} onClick={()=> {setValue(item.id)}}>{item.user} </li>*/
-            <UserItem onClick={() => {
+            <UserItem  onClick={() => {
                 setValue(item.id)
-            }} name={item.user}/>
+            }} name={item.user} itemId={item.id} value={value}/>
         ))}
 
     </ul>

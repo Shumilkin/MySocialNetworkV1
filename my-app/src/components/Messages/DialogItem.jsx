@@ -23,7 +23,7 @@ const DialogItem = (props) => {
        {/* <BackToUp />*/}
 {/*<Scroll/>*/}
         {props.data}
-        {props.data}
+
        {/* {user}*/}
     </div>
 }

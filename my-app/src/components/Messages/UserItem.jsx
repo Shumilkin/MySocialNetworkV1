@@ -3,7 +3,9 @@ import profileLogo from "../../media/uzerlogo.png";
 import * as React from "react";
 
 let UserItem = (props) =>{
-    return <div className={s.postContainer} onClick={props.onClick}>
+ let   value = props.value
+    let id = props.itemId
+    return <div className={value == id ? s.postContainerActive :  s.postContainer  } onClick={props.onClick}>
         <div className={"d-flex"}>
             <div className={"p-1"}>
                 <img src={profileLogo} className={s.profileMessageLogo}/>
