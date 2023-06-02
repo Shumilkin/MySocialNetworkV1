@@ -2,6 +2,9 @@ import React from 'react';
 import {withFormik} from 'formik';
 import { useDispatch } from 'react-redux'
 import {useState} from 'react'
+import Form from "react-bootstrap/Form";
+import {Button} from "react-bootstrap";
+import s from "../Messages/messages.module.css";
 const MyForm = props => {
     const {
         values,
@@ -14,7 +17,16 @@ const MyForm = props => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input
+            <div className={"d-flex"}>
+            <Form.Control placeholder="Enter name..." type="textarea"
+                          name="name" onSubmit={handleSubmit} className={"p-1"} onChange={handleChange}
+                          onBlur={handleBlur} value={values.name}
+                          name="name"/>
+            {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
+            <Button className={s.search} variant="primary" type="submit">
+                Search
+            </Button>
+            {/*<input
                 type="text"
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -22,7 +34,8 @@ const MyForm = props => {
                 name="name"
             />
             {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
-            <button type="submit">Submit</button>
+            <button type="submit">Submit</button>*/}
+            </div>
         </form>
     );
 };

@@ -60,10 +60,10 @@ function App(props) {
                     <Sidebar/>
                     <Routes>
                         <Route path='/:id' element={<ProfileContainer/>}/>
-                        <Route path='/messages' element={<Messages/>}/>
+                        <Route path='/messages' element={<Messages2/>}/>
                         <Route path='/friends' element={<FriendsContainer/>}/>
                         <Route path='/music' element={<Music/>}/>
-                        <Route path='/settings' element={<Messages2/>}/>
+                        <Route path='/settings' element={<Settings/>}/>
                         <Route path='/login' element={<LoginPage />}/>
                     </Routes>
                 </div>
