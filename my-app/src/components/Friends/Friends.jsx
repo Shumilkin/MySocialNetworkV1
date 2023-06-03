@@ -15,12 +15,18 @@ import DialogItem from "../Messages/DialogItem";
 import profileLogo from "../../media/uzerlogo.png";
 import MessagesList from "../Messages/MessagesList";
 import MessagesForm from "../Messages/MessagesForm/MessagesForm";
+import {BiMessageSquareDetail} from "react-icons/bi";
+import {CiLocationOn} from "react-icons/ci";
+import {BsCalendar2Week} from "react-icons/bs";
 
 const Friends = (props) => {
     const dispatch = useDispatch()
     const usersData = useSelector(state => state.usersPage.users)
     const [value, setValue] = useState(true);
+
+    const friendsNumber = useSelector((state) => state.usersPage.friendNumber)
     const getUsersData2 = dispatch(getUsersData)
+
     useEffect(() => {
         /*  getUsersData2*/
         props.getUsersData()
@@ -28,7 +34,7 @@ const Friends = (props) => {
     console.log(usersData)
     const usersList = usersData.map((user) => {
         const userLink = '/' + user.id
-        return <div>
+        return <div className={s.userContainer}>
             <div className="row">
                 <div className="col-sm-1">
                     <NavLink to={userLink} end> <img className={s.logo}
@@ -37,17 +43,24 @@ const Friends = (props) => {
 
                 </div>
                 <div className="col">
-                    <div>{user.name}</div>
-                    {user.status ? <li> status: {user.status}</li> : null}
+                    <div className={s.userInfoContainer}>
+                        <div className={s.userName}>{user.name}</div>
+                        {user.status ? <li> {user.status}</li> : null}
+                        <span> <CiLocationOn style={{color: 'grey', size: '50px'}}/> Russia</span>
+                        <span> <BsCalendar2Week style={{color: 'grey', size: '50px'}}/> 4 hours ago</span>
 
+
+                    </div>
+                </div>
+                <div className="col text-end align-text-center">
                     {user.followed != true
-                        ? <Button variant="primary" onClick={() => {
+                        ? <Button className={s.followBtn} variant="primary" onClick={() => {
                             props.followUser(user.id)
                         }}>Follow </Button>
-                        : <Button variant="primary" onClick={() => {
+                        : <Button className={s.unfollowBtn} variant="primary" onClick={() => {
                             props.unfollowUser(user.id)
                         }}>Unfollow </Button>}
-
+                    <BiMessageSquareDetail style={{color: 'blue', size: '50px'}}/>
                 </div>
             </div>
 
@@ -65,19 +78,35 @@ const Friends = (props) => {
                                          setFriend={props.setFriend}/>
                         </div>
                         <div className={st.containerHalfRight}>
-                            <Switch
-                                isOn={props.friend}
-                                handleToggle={() => {
-                                    props.setFriend(props.friend == true ? null : true)
-                                    setValue(props.friend)
-                                    props.getUsersData(10, 1, '', value)
-                                }}
-                            />
+                            <div className={s.navigation}>
+                                <div  className={"d-flex align-items-start"}>
+                                    <div  className={props.friend == true ? s.friendsTogler: s.friendsToglerActive}>
+                                        All Members
+                                    </div>
+                                    <Switch
+                                            isOn={props.friend}
+                                            handleToggle={() => {
+                                                props.setFriend(props.friend == true ? null : true)
+                                                setValue(props.friend)
+
+                                                props.getUsersData(10, 1, '', value)
+                                            }}
+                                    />
+                                    <div className={props.friend == true ? s.friendsToglerActive: s.friendsTogler}>
+                                        My Friends {friendsNumber}
+                                    </div>
+                                </div>
+
+                            </div>
                             {usersList}
-                            <PaginationP totalCount={props.totalCount} getUsersData={props.getUsersData} searchName={props.searchName}
+                            <PaginationP totalCount={props.totalCount} getUsersData={props.getUsersData}
+                                         searchName={props.searchName}
                                          page={props.page} friend={props.friend}/>
+
                         </div>
+
                     </div>
+
                     <div className={"col-4"}>
                         <div className={st.userDialogContainer} onClick={props.onClick}>
                             <div className={"d-flex"}>
@@ -96,11 +125,10 @@ const Friends = (props) => {
             </div>
         </div>
 
-        Friends
 
-        <FriendsForm getUsersData={props.getUsersData} setPage={props.setPage} friend={props.friend}
+        {/*   <FriendsForm getUsersData={props.getUsersData} setPage={props.setPage} friend={props.friend}
                      setFriend={props.setFriend}/>
-        {usersList}
+        {usersList}*/}
     </div>
 }
 let mapStateToProps = (state) => (

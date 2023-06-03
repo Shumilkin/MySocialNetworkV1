@@ -10,6 +10,7 @@ const UNFOLLOW_IS_DONE = 'UNFOLLOW_IS_DONE'
 const SET_SEARCH_NAME = 'SET_SEARCH_NAME'
 const SET_PAGE = 'SET_PAGE'
 const SET_FRIEND = 'SET_FRIEND'
+const SET_FRIEND_NUMBER = 'SET_FRIEND_NUMBER'
 
 const initialState = {
     userId: 1,
@@ -19,6 +20,7 @@ const initialState = {
     users: [],
     totalCount: 0,
     searchName: '',
+    friensNumber:0
 
 
 
@@ -45,6 +47,8 @@ export default function userReducer(state = initialState, action) {
             return {...state, page: action.page}
         case SET_FRIEND:
             return {...state, friend: action.data}
+        case SET_FRIEND_NUMBER:
+            return {...state, friendNumber: action.data}
         default:
             return state
     }
@@ -56,6 +60,7 @@ export const followIsDone = (userId) => ({type: FOLLOW_IS_DONE, userId});
 export const unfollowIsDone = (userId) => ({type: UNFOLLOW_IS_DONE, userId});
 export const setSearchName = (name) => ({type: SET_SEARCH_NAME, name});
 export const setFriend = (data) => ({type: SET_FRIEND, data});
+export const setFriendNumber = (data) => ({type: SET_FRIEND_NUMBER, data});
 
 export const setPage = (page) => ({type: SET_PAGE, page});
 
@@ -70,7 +75,16 @@ export const getUsersData = (pageSize, currentPage, term = initialState.searchNa
             dispatch(setTotalCount(data.totalCount))
 
         })
+    profileApi.users(10, 1, "" , true )
+        .then(data => {
+            dispatch(setFriendNumber(data.totalCount))
+        })
 }
+
+
+
+
+
 export const followUser = (userId) => (dispatch) => {
 
     profileApi.follow(userId)
