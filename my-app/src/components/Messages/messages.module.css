@@ -120,7 +120,7 @@ margin-top: -5px;
     font-size: 12px;
     margin-top: 10px;
     color: white;
-    background-color: royalblue;
+    background: linear-gradient(to right, #1e91e3, 80%,  #1e5fe3);
     border-radius: 10px;
     padding: 0;
 }

@@ -19,6 +19,7 @@ import {BiMessageSquareDetail} from "react-icons/bi";
 import {CiLocationOn} from "react-icons/ci";
 import {BsCalendar2Week} from "react-icons/bs";
 import Activities from "./Activities";
+import Badge from "react-bootstrap/Badge";
 
 const Friends = (props) => {
     const dispatch = useDispatch()
@@ -94,7 +95,7 @@ const Friends = (props) => {
                                         }}
                                     />
                                     <div className={props.friend == true ? s.friendsToglerActive : s.friendsTogler}>
-                                        My Friends {friendsNumber}
+                                        My Friends <Badge pill bg="success">{friendsNumber}</Badge>
                                     </div>
                                 </div>
 
@@ -122,8 +123,7 @@ const Friends = (props) => {
                             </div>
                             <div className={s.activeUserInfo}> <Activities/></div>
                         </div>
-                        <div className={st.containerHalfLeft}>
-                        </div>
+
                     </div>
                 </div>
             </div>

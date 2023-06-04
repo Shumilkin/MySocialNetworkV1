@@ -50,16 +50,17 @@ export const profileApi = {
 
         })
     },
-    authMe() {
-        return instance.get(`/auth/me`).then(response => {
-            return response.data
-        })
-    },
     logoutMe() {
         return instance.delete(`/auth/login`).then(response => {
             return response.data
         })
     },
+    authMe() {
+        return instance.get(`/auth/me`).then(response => {
+            return response.data
+        })
+    },
+
     captcha() {
         return instance.get(`/security/get-captcha-url`).then(response => {
             return response.data

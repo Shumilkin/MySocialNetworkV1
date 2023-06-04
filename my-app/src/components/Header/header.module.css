@@ -30,3 +30,22 @@
     border-radius: 50%;
 
 }
+.activitiesContainer{
+    width:350px;
+    height:45vh;
+    padding: 0px 15px;
+    overflow: auto;
+    white-space: normal;
+&::-webkit-scrollbar {
+     -webkit-appearance: none;
+     width: 7px;
+     background: #00000038;
+ }
+&::-webkit-scrollbar-thumb {
+     border-radius: 4px;
+     background-color: #595959;
+ }
+}
+.messagesContainer{
+
+}

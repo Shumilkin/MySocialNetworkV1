@@ -15,10 +15,15 @@ import {FaUserFriends} from "react-icons/fa";
 import {BiMessageRounded} from "react-icons/bi";
 import {RiNotification2Line} from "react-icons/ri";
 import {useSelector} from 'react-redux'
+import Activities from "../Friends/Activities";
+import { useDispatch } from 'react-redux'
+import {BsHouseDoor} from "react-icons/bs";
 
 
 function Header() {
     const profileLogo = useSelector((state) => state.profilePage.profileInfo.photos.small)
+    const dispatch = useDispatch()
+
     return (
         <div className={s.header}>
 
@@ -53,27 +58,40 @@ function Header() {
 
                                 <Nav.Link href="#action2"> <FaUserFriends/></Nav.Link>
                                 <Nav.Link href="#action2"> <BiMessageRounded/></Nav.Link>
-                                <Nav.Link href="#action2"> <RiNotification2Line/></Nav.Link>
+
                                 <NavDropdown
-                                    title="Dropdown"
+                                    align="end"
+                                    title=<RiNotification2Line/>
                                     id={`offcanvasNavbarDropdown-expand-${"sm"}`}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <div className={s.activitiesContainer}>
+                                        <Activities/>
+                                    </div>
+                                </NavDropdown>
+
+                                <NavDropdown
+                                    align="end"
+                                    title=<img className={ s.profileLogo} src={profileLogo} alt="Logo"/>
+                                    id={`offcanvasNavbarDropdown-expand-${"sm"}`}
+                                    className={"dropleft"}
+                                >
+
+                                 {/*   <NavDropdown.Item href="#action3">
                                         <HeaderDropDown/>
-                                    </NavDropdown.Item>
+                                    </NavDropdown.Item>*/}
                                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">
                                         Another action
                                     </NavDropdown.Item>
                                     <NavDropdown.Divider/>
-                                    <NavDropdown.Item href="#action5">
-                                        Something else here
+                                    <NavDropdown.Item onClick={()=>dispatch(takeLogoutData())}>
+                                       Logout <BsHouseDoor/>
                                     </NavDropdown.Item>
 
                                 </NavDropdown>
-                                <Nav.Link href="#action2">
+                               {/* <Nav.Link href="#action2">
                                     <img className={ s.profileLogo} src={profileLogo} alt="Logo"/>
-                                </Nav.Link>
+                                </Nav.Link>*/}
                             </Nav>
 
                         </Offcanvas.Body>
