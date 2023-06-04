@@ -6,7 +6,7 @@ const SET_IS_NOT_AUTH = 'SET_IS_NOT_AUTH'
 const SET_CAPTCHA_DATA = 'SET_CAPTCHA_DATA'
 const initialState = {
     isAuth: false,
-    profileId: 3,
+    profileId: 24842,
     serverMessage: '',
     captcha:''
 
@@ -45,6 +45,7 @@ export const getAuthData = (data) => (dispatch) => {
 export const takeAuthData = () => (dispatch) => {
     profileApi.authMe()
         .then(data => {
+
             if(data.resultCode == 0) {dispatch(setIsAuth())}
 
         })

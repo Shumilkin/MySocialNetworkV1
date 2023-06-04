@@ -11,7 +11,7 @@ import FriendsContainer from "./components/Friends/Friends";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {getProfileStatus, setUserProfile} from "./redux/profile-reduser";
-import {connect} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import { useEffect  } from 'react';
 import LoginPage from "./components/Login/LoginPage";
 import {getAuthData, setAuthData, takeAuthData, takeCaptcha, takelogoutData} from "./redux/auth-reducer";
@@ -30,14 +30,14 @@ props.setUserProfile(userId)
 
 function App(props) {
     let  userId  = window.location.pathname.substring(1)
-
+const dispatch = useDispatch()
 
    useEffect(() => {
 
        /*props.getProfileStatus(userId)*/
        props.takeAuthData()
        props.takeCaptcha()
-
+dispatch(setUserProfile(24842))
 
     });
 
@@ -60,6 +60,7 @@ function App(props) {
                     <Sidebar/>
                     <Routes>
                         <Route path='/:id' element={<ProfileContainer/>}/>
+                        <Route path="/" element={<ProfileContainer />} />
                         <Route path='/messages' element={<Messages2/>}/>
                         <Route path='/friends' element={<FriendsContainer/>}/>
                         <Route path='/music' element={<Music/>}/>
