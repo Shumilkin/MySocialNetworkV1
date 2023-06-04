@@ -18,6 +18,9 @@ import {useSelector} from 'react-redux'
 import Activities from "../Friends/Activities";
 import { useDispatch } from 'react-redux'
 import {BsHouseDoor} from "react-icons/bs";
+import {NavLink} from "react-router-dom";
+import {CgProfile} from "react-icons/cg";
+import {AiOutlineUser} from "react-icons/ai";
 
 
 function Header() {
@@ -56,8 +59,16 @@ function Header() {
                                     {/* <Button variant="outline-success">Search</Button>*/}
                                 </Form>
 
-                                <Nav.Link href="#action2"> <FaUserFriends/></Nav.Link>
-                                <Nav.Link href="#action2"> <BiMessageRounded/></Nav.Link>
+                                <Nav.Link href="#action2">
+                                    <NavLink to="/friends" className="nav-link align-middle   pl-2" end>
+                                        <FaUserFriends/>
+                                    </NavLink>
+                                    </Nav.Link>
+                                <Nav.Link href="#action2">
+                                    <NavLink to="/messages" className="nav-link align-middle   pl-2" end>
+                                        <BiMessageRounded/>
+                                    </NavLink>
+                                    </Nav.Link>
 
                                 <NavDropdown
                                     align="end"
@@ -79,13 +90,15 @@ function Header() {
                                  {/*   <NavDropdown.Item href="#action3">
                                         <HeaderDropDown/>
                                     </NavDropdown.Item>*/}
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                                    <NavDropdown.Item ><NavLink to="/" className="nav-link align-middle   pl-2" end>
+                                        To Profile <AiOutlineUser/>
+                                    </NavLink></NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">
                                         Another action
                                     </NavDropdown.Item>
                                     <NavDropdown.Divider/>
                                     <NavDropdown.Item onClick={()=>dispatch(takeLogoutData())}>
-                                       Logout <BsHouseDoor/>
+                                        <BsHouseDoor/> Logout
                                     </NavDropdown.Item>
 
                                 </NavDropdown>

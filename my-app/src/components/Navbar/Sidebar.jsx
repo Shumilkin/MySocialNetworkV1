@@ -6,6 +6,7 @@ import {FaUserFriends} from "react-icons/fa";
 import {BsMusicPlayer} from "react-icons/bs";
 import {IoMdSettings} from "react-icons/io";
 import {useSelector} from "react-redux";
+import {MdVerifiedUser} from "react-icons/md";
 
 
 const Navbar = () => {
@@ -17,13 +18,22 @@ const Navbar = () => {
                 <div className=" bg-primery text-secondary">
                     <div
                         className="d-flex text-secondary flex-column align-items-center align-items-stretch px-3 pt-2  min-vh-100  ">
-                        <div>
-                            <img src={profileLogo} className={s.sidebarLogo}/>
-                            <span>{fullName}</span>
+                        <div className={"d-flex align-items-center"}>
+                            <div>
+                                <img src={profileLogo} className={s.sidebarLogo}/>
+                            </div>
+                           <div>
+                               <span className={s.sidebarName}>{fullName} <MdVerifiedUser style={{color: 'blue', height: '15px'}}/></span>
+                               <span className={s.sidebarSite}>@shumila</span>
+                           </div>
+
+
+
                         </div>
                         <a href="/"
                            className="d-flex text-secondary align-items-center pb-3 mb-md-0 me-md-auto  text-decoration-none ">
                             <span className="fs-5 d-none d-sm-inline">Menu</span>
+
                         </a>
 
                         <div className="sideBar nav  text-secondary flex-column nav-pills " id="v-pills-tab"
