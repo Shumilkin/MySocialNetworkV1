@@ -18,6 +18,7 @@ import MessagesForm from "../Messages/MessagesForm/MessagesForm";
 import {BiMessageSquareDetail} from "react-icons/bi";
 import {CiLocationOn} from "react-icons/ci";
 import {BsCalendar2Week} from "react-icons/bs";
+import Activities from "./Activities";
 
 const Friends = (props) => {
     const dispatch = useDispatch()
@@ -79,20 +80,20 @@ const Friends = (props) => {
                         </div>
                         <div className={st.containerHalfRight}>
                             <div className={s.navigation}>
-                                <div  className={"d-flex align-items-start"}>
-                                    <div  className={props.friend == true ? s.friendsTogler: s.friendsToglerActive}>
+                                <div className={"d-flex align-items-start"}>
+                                    <div className={props.friend == true ? s.friendsTogler : s.friendsToglerActive}>
                                         All Members
                                     </div>
                                     <Switch
-                                            isOn={props.friend}
-                                            handleToggle={() => {
-                                                props.setFriend(props.friend == true ? null : true)
-                                                setValue(props.friend)
+                                        isOn={props.friend}
+                                        handleToggle={() => {
+                                            props.setFriend(props.friend == true ? null : true)
+                                            setValue(props.friend)
 
-                                                props.getUsersData(10, 1, '', value)
-                                            }}
+                                            props.getUsersData(10, 1, '', value)
+                                        }}
                                     />
-                                    <div className={props.friend == true ? s.friendsToglerActive: s.friendsTogler}>
+                                    <div className={props.friend == true ? s.friendsToglerActive : s.friendsTogler}>
                                         My Friends {friendsNumber}
                                     </div>
                                 </div>
@@ -108,15 +109,18 @@ const Friends = (props) => {
                     </div>
 
                     <div className={"col-4"}>
-                        <div className={st.userDialogContainer} onClick={props.onClick}>
-                            <div className={"d-flex"}>
-                                <div className={"p-1"}>
-                                </div>
-                                <div className={"p-2"}>
-                                </div>
-                            </div>
+
+                        <div className={s.activeUserInfoContainer} onClick={props.onClick}>
+                            <div className={s.activeUsers}>
+                                <span>Active User</span>
+                                                            </div>
+                            <div className={s.activeUserInfo}> There are no recently active members</div>
                         </div>
-                        <div className={st.containerHalfRight}>
+                        <div className={s.activeUserInfoContainer} onClick={props.onClick}>
+                            <div className={s.activeUsers}>
+                                <span>Last Activities</span>
+                            </div>
+                            <div className={s.activeUserInfo}> <Activities/></div>
                         </div>
                         <div className={st.containerHalfLeft}>
                         </div>
