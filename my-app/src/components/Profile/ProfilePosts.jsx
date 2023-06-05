@@ -23,7 +23,7 @@ const ProfilePosts = (props) => {
     return <div classname={s.area}>
         {/*<ProfilePostsForm data={props}/>*/}
         <RenderList data={props}/>
-        <Post/>
+
     </div>
 }
 

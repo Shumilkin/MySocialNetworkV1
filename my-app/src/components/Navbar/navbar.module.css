@@ -30,3 +30,8 @@ border-radius: 50%;}
     font-size: 12px;
     margin-left: 15px;
 }
+.profileInfoContainer{
+    border-bottom:1px solid lightgrey;
+    padding-bottom:15px;
+    margin-bottom: 15px;
+}

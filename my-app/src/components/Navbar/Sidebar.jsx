@@ -18,21 +18,24 @@ const Navbar = () => {
                 <div className=" bg-primery text-secondary">
                     <div
                         className="d-flex text-secondary flex-column align-items-center align-items-stretch px-3 pt-2  min-vh-100  ">
+                        <div className={s.profileInfoContainer}>
                         <div className={"d-flex align-items-center"}>
-                            <div>
-                                <img src={profileLogo} className={s.sidebarLogo}/>
+
+                                <div>
+                                    <img src={profileLogo} className={s.sidebarLogo}/>
+                                </div>
+                                <div>
+                                    <span className={s.sidebarName}>{fullName} <MdVerifiedUser
+                                        style={{color: 'blue', height: '15px'}}/></span>
+                                    <span className={s.sidebarSite}>@shumila</span>
+                                </div>
+
                             </div>
-                           <div>
-                               <span className={s.sidebarName}>{fullName} <MdVerifiedUser style={{color: 'blue', height: '15px'}}/></span>
-                               <span className={s.sidebarSite}>@shumila</span>
-                           </div>
-
-
 
                         </div>
                         <a href="/"
                            className="d-flex text-secondary align-items-center pb-3 mb-md-0 me-md-auto  text-decoration-none ">
-                            <span className="fs-5 d-none d-sm-inline">Menu</span>
+                            <span className="fs-7 d-none d-sm-inline">MENU</span>
 
                         </a>
 

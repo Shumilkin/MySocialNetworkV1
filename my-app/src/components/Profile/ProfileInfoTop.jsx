@@ -31,7 +31,7 @@ const ProfileInfoTop = (props) => {
 
                 </div>
 
-                <div className={"row align-items-center p-3"}>
+                <div className={"row align-items-center p-1"}>
                     <div className={"col-lg-4 text-center order-lg-1 order-sm-1 order-md-2 order-2"}>
                         <div className={"flex-column"}>
                             <div className={" text-center"}>

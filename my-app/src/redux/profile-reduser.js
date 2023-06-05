@@ -6,8 +6,8 @@ const GET_USER_PROFILE_STATUS = 'GET_USER_PROFILE_STATUS'
 const SET_USER_INITIALIZED = 'SET_USER_INITIALIZED'
 const initialState = {
     postsData: [
-        {id:1, postText:'Hi', likesCount:9},
-        {id:2, postText:'I am react developer', likesCount:6},
+        {id:1, postText:'“Hello world. This is my first post”', likesCount:9},
+        {id:2, postText:'I am the beginer react developer', likesCount:6},
         {id:3, postText:'Belorussian is the best!', likesCount:9}
     ],
     profileId: 3,

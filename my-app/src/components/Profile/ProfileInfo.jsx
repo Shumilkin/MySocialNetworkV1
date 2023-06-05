@@ -35,9 +35,11 @@ const ProfileInfo = (props) => {
     return <div classname={s.area}>
         <img className={s.profileBG}
              src="https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg"/>
-        <ProfileInfoTop photo={props.profileInfo.photos.small} setUserPhoto={props.setUserPhoto}
-                        fullName={props.profileInfo.fullName} status={props.status}
-                        setStatus={props.setStatus} status={props.status}/>
+        <div className = {s.profileInfoContainer}>
+            <ProfileInfoTop photo={props.profileInfo.photos.small} setUserPhoto={props.setUserPhoto}
+                            fullName={props.profileInfo.fullName} status={props.status}
+                            setStatus={props.setStatus} status={props.status}/>
+        </div>
         <div className={s.containerCarousel}>
             <div className={s.carousel}>
                 <ReactSlickDemo/>
@@ -66,7 +68,8 @@ const ProfileInfo = (props) => {
                 </div>
                 <div className={"col-4"}>
                     <div className={s.containerHalfRight}>
-                        <ProfileContacts setProfileContacts={props.setProfileContacts} profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>{/*
+                        <ProfileContacts setProfileContacts={props.setProfileContacts}
+                                         profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>{/*
                         Id :{props.profileInfo.userId}
                         Looking for a job :{props.profileInfo.lookingForAJobDescription}*/}
                     </div>
