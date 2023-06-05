@@ -4,6 +4,7 @@ const GET_USER_PROFILE = 'GET_USER_PROFILE'
 const GET_USER_PROFILE_POST = 'GET_USER_PROFILE_POST'
 const GET_USER_PROFILE_STATUS = 'GET_USER_PROFILE_STATUS'
 const SET_USER_INITIALIZED = 'SET_USER_INITIALIZED'
+const SET_USER_PHOTO = 'SET_USER_PHOTO'
 const initialState = {
     postsData: [
         {id:1, postText:'“Hello world. This is my first post”', likesCount:9},
@@ -26,6 +27,8 @@ export default function profileReducer(state = initialState, action) {
             return { ...state, postsData:  [...state.postsData, newMessage] }
         case GET_USER_PROFILE_STATUS:
             return { ...state, profileStatus: action.status }
+        case SET_USER_PHOTO:
+            return { ...state    }
 
         default:
             return state
@@ -35,6 +38,7 @@ export const getUserProfile = (data) => ({ type: GET_USER_PROFILE, data });
 export const setInitialised = () => ({ type: SET_USER_INITIALIZED });
 export const getUserProfilePost = (post) => ({ type: GET_USER_PROFILE_POST, post });
 export const setStatus = (status) => ({ type: GET_USER_PROFILE_STATUS, status });
+/*export const setUserPhoto = (photo) => ({ type: SET_USER_PHOTO, photo });*/
 export const getProfileStatus = (userId) => (dispatch) => {
     profileApi.getStatus(userId)
         .then(data => {
@@ -75,7 +79,9 @@ export const setUserPhoto = (photo) => (dispatch) => {
 
     profileApi.setPhoto(photo)
         .then(data => {
+            dispatch(setUserProfile(24842))
             console.log(data)
+
                 /*dispatch(getUserProfile(data))*/
             }
         )
