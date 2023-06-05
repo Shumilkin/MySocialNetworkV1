@@ -27,8 +27,10 @@ const ProfileContacts = (props) => {
                     <SocialIcon style={{height: 50, width: 50}} url={site}/>
                 </div>
                 <div className={"col-9  m-2"}>
-                    <div className={"input-group "}><span className="input-group-text"
-                                                          id="basic-addon1"> {props.list[key] != null ? props.list[key] : "---"}</span>
+                    <div className={"input-group "}>
+                        <span className="input-group-text" id="basic-addon1">
+                        {(props.list[key] != null  ) ? props.list[key] : "---"}
+                            {props.list[key] === "" ? "---" : null}</span>
                     </div>
                 </div>
             </div>
@@ -50,15 +52,12 @@ const ProfileContacts = (props) => {
               {count % 2 ? "Save" : "Edit"}>
               <HiOutlinePencilAlt  style={{height: 35, width: 35}}/>
           </div>*/}
-
             {/* <button onClick={() => setCount(count + 1)}>
                 {count % 2 ? "Save" : "Edit"}
             </button>*/}
         </div>
-
-
         {count % 2 ? <div>
-                <ProfileContactsForm list={props.list} contacts={props.contacts}
+                <ProfileContactsForm list={props.list} contacts={props.contacts} setCount={setCount}
                                      setProfileContacts={props.setProfileContacts}/>
                 {/*<button onClick={() => props.setProfileContacts('1')}>
                 sd

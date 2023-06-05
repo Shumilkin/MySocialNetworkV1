@@ -1,7 +1,9 @@
 import React from 'react';
 import {withFormik, useField, Formik} from 'formik';
-import {useState} from 'react'
+
 import {SocialIcon} from "react-social-icons";
+import s from "./../profile.module.css"
+
 const MyForm = props => {
     const {
         values,
@@ -17,22 +19,30 @@ const MyForm = props => {
     let contacts = ''
     for (var key in list) {
         const site = "https://" + key + ".com"
+        const siteInfo2=(list[key]);
+
         contacts = [...contacts,
+
             <div className={"row  "}>
                 <div className={"col-1 m-1"}>
-                    <SocialIcon  style={{height: 50, width: 50}}  url={site}/>
+                    <SocialIcon style={{height: 50, width: 50}} url={site}/>
                 </div>
                 <div className={"col-6  m-2"}>
-                    <div className={"input-group "}> <span className="input-group-text" id="basic-addon1">  {key}</span>
-                        <input className={"form-control"}
-                               type="text"
-                               onChange={handleChange}
-                               onBlur={handleBlur}
-                               placeholder={list[key] != null ? list[key] : null}
-                               value={list[key]}
-                               name={key}
-                        /></div>
-                   </div>
+                    <div className={s.contactsInfoContainer}>
+                        <div className={"input-group "}>
+                            <span className="input-group-text" id="basic-addon1">  {key}</span>
+                            <input className={"form-control"}
+                                   type="text"
+                                   onChange={handleChange}
+                                   onBlur={handleBlur}
+                                   placeholder={siteInfo2}
+                                /*value={list[key]}*/
+                                   name={key}
+                            />
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
             /*<div >
             <i>{key}</i>
@@ -66,10 +76,8 @@ const MyForm = props => {
                 {/* {errors.name && touched.name && <div id="feedback">{errors.name}</div>}*/}
                 {contacts}
                 <div className="d-grid gap-2 m-4">
-                    <button type="submit"  className="btn btn-outline-primary ">Submit</button>
+                    <button type="submit" className="btn btn-outline-primary ">Submit</button>
                 </div>
-
-
             </form>
         </Formik>
     );
@@ -91,6 +99,7 @@ const ProfileContactsForm = withFormik({
         for (var key in list) {
             contactsForSet = {...contactsForSet, key: values.key}
         }*/
+        props.setCount(0)
         let listOfContacts = {}
         let list2 = props.list
         for (var key in list2) {
@@ -98,6 +107,7 @@ const ProfileContactsForm = withFormik({
             Object.assign(listOfContacts, {[key]: values[key2]});
             /*listOfContacts = { [key] :values[key2]}*/
         }
+        debugger
         props.setProfileContacts({
             lookingForAJob: true,
             lookingForAJobDescription: "test",

@@ -60,6 +60,7 @@ export const setProfileContacts = (contacts) => (dispatch) =>{
     profileApi.setProfile(contacts)
 
         . then(data => {
+            dispatch(setUserProfile(24842))
            })
 
 

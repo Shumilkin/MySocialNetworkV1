@@ -69,12 +69,12 @@ const ProfileInfo = (props) => {
                 <div className={"col-4"}>
                     <div className={s.containerHalfRight}>
                         <ProfileContacts setProfileContacts={props.setProfileContacts}
-                                         profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>{/*
+                                         profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>
+                                         {/*
                         Id :{props.profileInfo.userId}
                         Looking for a job :{props.profileInfo.lookingForAJobDescription}*/}
                     </div>
                 </div>
-
             </div>
         </div>
 
