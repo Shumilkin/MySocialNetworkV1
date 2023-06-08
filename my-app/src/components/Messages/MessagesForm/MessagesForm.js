@@ -33,13 +33,13 @@ const MyForm = props => {
                     value={values.name}
                     name="message"
                 />*/}
-                <Form.Control placeholder="Search ..." type="textarea"
+                <Form.Control placeholder="Новое собщение" type="textarea"
                               name="name" onSubmit={handleSubmit} className={"p-1"} onChange={handleChange}
                               onBlur={handleBlur} value={values.name}
                               name="message"/>
                 {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
                 <Button className={s.search} variant="primary" type="submit">
-                    Send
+                    Отправить
                 </Button>
               {/*  <button type="submit">Submit</button>*/}
             </div>

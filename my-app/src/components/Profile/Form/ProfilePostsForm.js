@@ -15,13 +15,13 @@ const MyForm = props => {
         <form onSubmit={handleSubmit}>
 
             <div className={"d-flex"}>
-                <Form.Control  placeholder="Create new post"  type="textarea"
+                <Form.Control  placeholder="Новый пост"  type="textarea"
                               onChange={handleChange}
                               onBlur={handleBlur}
                               value={values.name}
                               name="name" className={"p-1"}/>
                 <Button variant="primary" type="submit">
-                   Post
+                   Добавить
                 </Button>
             </div>
 

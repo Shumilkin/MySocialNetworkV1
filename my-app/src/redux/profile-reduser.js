@@ -7,9 +7,9 @@ const SET_USER_INITIALIZED = 'SET_USER_INITIALIZED'
 const SET_USER_PHOTO = 'SET_USER_PHOTO'
 const initialState = {
     postsData: [
-        {id:1, postText:'“Hello world. This is my first post”', likesCount:9},
-        {id:2, postText:'I am the beginer react developer', likesCount:6},
-        {id:3, postText:'Belorussian is the best!', likesCount:9}
+        {id:1, postText:'“Hello World! Это мой первый пост”', likesCount:9},
+        {id:2, postText:' Я начинающий реакт разработчик.', likesCount:6},
+        {id:3, postText:'Привет из Беларуси!', likesCount:9}
     ],
     profileId: 3,
     profileInfo: {photos:{small:"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Picture.png"}, contacts:{github:""}},

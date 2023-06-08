@@ -30,12 +30,12 @@ let Activities = () => {
     }
     return <div>
 
-       <ActivitiesItem link={"/22"} action={"liked post by"} time={"2 hours ago"} object={"Natalie Danilchenkofff"} />
-        <ActivitiesItem link={"/1034"} action={"add new friend"}  time={"3 hours ago"} object={"Katrin@Voronkevich"}/>
-        <ActivitiesItem link={"/10"} action={"add new friend"}  time={"6 hours ago"} object={"Дмитрий Долидов"}/>
-        <ActivitiesItem link={"/9"} action={"shared photo by"}  time={"8 hours ago"} object={"Jak Zigil`man"}/>
+       <ActivitiesItem link={"/22"} action={"оценил публикацию"} time={"2 hours ago"} object={"Natalie Danilchenkofff"} />
+        <ActivitiesItem link={"/1034"} action={"добавил нового друга"}  time={"3 hours ago"} object={"Katrin@Voronkevich"}/>
+        <ActivitiesItem link={"/10"} action={"добавил нового друга"}  time={"6 hours ago"} object={"Дмитрий Долидов"}/>
+        <ActivitiesItem link={"/9"} action={"поделился фото с"}  time={"8 hours ago"} object={"Jak Zigil`man"}/>
 
-        <ActivitiesItem link={"/11"} action={"liked post by"}  time={"15 hours ago"} object={"Andrecky"}/>
+        <ActivitiesItem link={"/11"} action={"оценил публикацию"}  time={"15 hours ago"} object={"Andrecky"}/>
     </div>
 
 }

@@ -16,20 +16,20 @@ const ProfilePost = (props) => {
             </div>
             <div className={"p-3"}>
                 <div className={s.postUser}>shumila</div>
-                <div className={s.postTime}>4 hours ago</div>
+                <div className={s.postTime}>4 часа назад</div>
             </div>
             <div className="ms-auto p-2">
                 <NavDropdown
                     title=""
                 >
                     <NavDropdown.Item href="#action3">
-                       Add favorite
+                       В избранное
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action3">Share</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Поделиться </NavDropdown.Item>
 
                     <NavDropdown.Divider/>
                     <NavDropdown.Item href="#action5">
-                        Delete
+                        Удалить
                     </NavDropdown.Item>
 
                 </NavDropdown>
@@ -45,7 +45,7 @@ const ProfilePost = (props) => {
                 {props.likesCount} <FcLike style={{height: 25, width: 25}}/>
             </div>
             <div className={s.postComment}>
-               <span>3 </span> <FaRegCommentDots style={{height: 25, width: 25}}/> Comments
+               <span>3 </span> <FaRegCommentDots style={{height: 25, width: 25}}/> Комментарии
             </div>
         </div>
 

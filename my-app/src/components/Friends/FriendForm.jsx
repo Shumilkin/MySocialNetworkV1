@@ -18,13 +18,13 @@ const MyForm = props => {
     return (
         <form onSubmit={handleSubmit}>
             <div className={"d-flex"}>
-            <Form.Control placeholder="Enter name..." type="textarea"
+            <Form.Control placeholder="Введите имя ..." type="textarea"
                           name="name" onSubmit={handleSubmit} className={"p-1"} onChange={handleChange}
                           onBlur={handleBlur} value={values.name}
                           name="name"/>
             {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
             <Button className={s.search} variant="primary" type="submit">
-                Search
+                Найти
             </Button>
             {/*<input
                 type="text"

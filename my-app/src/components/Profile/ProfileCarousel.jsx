@@ -59,7 +59,7 @@ class ReactSlickDemo extends React.Component {
 
                             <div className={s.carouselItemLogo}>
                                 <RiCalendarTodoFill/>
-                                <span>Calendar</span>
+                                <span>Календарь</span>
                             </div>
 
 
@@ -69,42 +69,42 @@ class ReactSlickDemo extends React.Component {
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <RiMailLine/>
-                            <span>Mails</span>
+                            <span>Сообщения</span>
                         </div>
 
                     </div>
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <RiMedalLine/>
-                            <span>Power</span>
+                            <span>Достижения</span>
                         </div>
 
                     </div>
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <RiCreativeCommonsNcFill/>
-                            <span>Coins</span>
+                            <span>Монеты</span>
                         </div>
 
                     </div>
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <AiOutlineSetting/>
-                            <span>Settings</span>
+                            <span>Настройки</span>
                         </div>
 
                     </div>
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <MdOutlinePermMedia/>
-                            <span>Media</span>
+                            <span>Галерея</span>
                         </div>
 
                     </div>
                     <div className={s.profileCarouselItem}>
                         <div className={s.carouselItemLogo}>
                             <AiOutlineUsergroupAdd/>
-                            <span>Friends</span>
+                            <span>Друзья</span>
                         </div>
 
                     </div>

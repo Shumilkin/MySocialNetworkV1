@@ -48,8 +48,8 @@ const Friends = (props) => {
                     <div className={s.userInfoContainer}>
                         <div className={s.userName}>{user.name}</div>
                         {user.status ? <li> {user.status}</li> : null}
-                        <span> <CiLocationOn style={{color: 'grey', size: '50px'}}/> Russia</span>
-                        <span> <BsCalendar2Week style={{color: 'grey', size: '50px'}}/> 4 hours ago</span>
+                        <span> <CiLocationOn style={{color: 'grey', size: '50px'}}/> Россия</span>
+                        <span> <BsCalendar2Week style={{color: 'grey', size: '50px'}}/> 4 часа назад</span>
 
 
                     </div>
@@ -58,10 +58,10 @@ const Friends = (props) => {
                     {user.followed != true
                         ? <Button className={s.followBtn} variant="primary" onClick={() => {
                             props.followUser(user.id)
-                        }}>Follow </Button>
+                        }}>Добавить </Button>
                         : <Button className={s.unfollowBtn} variant="primary" onClick={() => {
                             props.unfollowUser(user.id)
-                        }}>Unfollow </Button>}
+                        }}>Удалить </Button>}
                     <BiMessageSquareDetail style={{color: 'blue', size: '50px'}}/>
                 </div>
             </div>
@@ -83,7 +83,7 @@ const Friends = (props) => {
                             <div className={s.navigation}>
                                 <div className={"d-flex align-items-start"}>
                                     <div className={props.friend == true ? s.friendsTogler : s.friendsToglerActive}>
-                                        All Members
+                                        Все пользователи
                                     </div>
                                     <Switch
                                         isOn={props.friend}
@@ -95,7 +95,7 @@ const Friends = (props) => {
                                         }}
                                     />
                                     <div className={props.friend == true ? s.friendsToglerActive : s.friendsTogler}>
-                                        My Friends <Badge pill bg="success">{friendsNumber}</Badge>
+                                        Мои друзья <Badge pill bg="success">{friendsNumber}</Badge>
                                     </div>
                                 </div>
 
@@ -113,13 +113,13 @@ const Friends = (props) => {
 
                         <div className={s.activeUserInfoContainer} onClick={props.onClick}>
                             <div className={s.activeUsers}>
-                                <span>Active User</span>
+                                <span>Активные пользователи</span>
                                                             </div>
-                            <div className={s.activeUserInfo}> There are no recently active members</div>
+                            <div className={s.activeUserInfo}> Нет недавно активных участников</div>
                         </div>
                         <div className={s.activeUserInfoContainer} onClick={props.onClick}>
                             <div className={s.activeUsers}>
-                                <span>Last Activities</span>
+                                <span>Последние события</span>
                             </div>
                             <div className={s.activeUserInfo}> <Activities/></div>
                         </div>

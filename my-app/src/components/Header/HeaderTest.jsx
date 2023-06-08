@@ -52,7 +52,7 @@ function Header() {
                                 <Form className="d-flex">
                                     <Form.Control
                                         type="search"
-                                        placeholder="Search"
+                                        placeholder="Поиск"
                                         className="me-2"
                                         aria-label="Search"
                                     />
@@ -91,14 +91,14 @@ function Header() {
                                         <HeaderDropDown/>
                                     </NavDropdown.Item>*/}
                                     <NavDropdown.Item ><NavLink to="/" className="nav-link align-middle   pl-2" end>
-                                        To Profile <AiOutlineUser/>
+                                        В профиль <AiOutlineUser/>
                                     </NavLink></NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">
-                                        Another action
+                                        Другое действие
                                     </NavDropdown.Item>
                                     <NavDropdown.Divider/>
                                     <NavDropdown.Item onClick={()=>dispatch(takeLogoutData())}>
-                                        <BsHouseDoor/> Logout
+                                        <BsHouseDoor/> Выйти
                                     </NavDropdown.Item>
 
                                 </NavDropdown>

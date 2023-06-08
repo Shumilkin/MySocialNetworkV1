@@ -35,10 +35,10 @@ const Messages = (props) => {
                 <div className={"col-4"}>
                     <div className={s.containerHalfLeft}>
                         <div className={"d-flex"}>
-                            <Form.Control placeholder="Search ..." type="textarea"
+                            <Form.Control placeholder="Введите имя ..." type="textarea"
                                           name="name" className={"p-1"}/>
                             <Button className={s.search} variant="primary" type="submit">
-                                Go
+                                Найти
                             </Button>
                         </div>
                     </div>

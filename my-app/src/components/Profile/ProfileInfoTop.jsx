@@ -37,16 +37,16 @@ const ProfileInfoTop = (props) => {
                             <div className={" text-center"}>
                                 <div className="d-flex justify-content-around">
                                     <div className={"p-2 text-center", s.profileIcons}><FcOldTimeCamera
-                                        style={{height: 25, width: 25}}/> 15 Photos
+                                        style={{height: 25, width: 25}}/> 15 Фото
                                     </div>
                                     <div className={"p-2 text-center", s.profileIcons}><FcFilmReel
-                                        style={{height: 25, width: 25}}/> 7 Videos
+                                        style={{height: 25, width: 25}}/> 7 Видео
                                     </div>
                                 </div>
                             </div>
                             <div className={" text-center"}>
                                 <div className={"p-2 text-center", s.profileIcons}><FcElectricity
-                                    style={{height: 25, width: 25}}/> 100 Coins
+                                    style={{height: 25, width: 25}}/> 100 Монет
                                 </div>
                             </div>
                             <div className={" text-center"}>
@@ -85,16 +85,16 @@ const ProfileInfoTop = (props) => {
                     <div className={"col-lg-4 text-center order-lg-3 order-sm-3 order-3"}>
                         <div className={"d-flex justify-content-around"}>
                             <div className={"text-center"}>
-                                <div className={"display-6"}>0</div>
-                                <div className={s.numbersInfo}>Posts</div>
+                                <div className={"display-6"}>3</div>
+                                <div className={s.numbersInfo}>Поста</div>
                             </div>
                             <div className={"text-center"}>
-                                <div className={"display-6"}>3</div>
-                                <div className={s.numbersInfo}>Comments</div>
+                                <div className={"display-6"}>0</div>
+                                <div className={s.numbersInfo}>Комментариев</div>
                             </div>
                             <div className={"text-center"}>
                                 <div className={"display-6"}>504K</div>
-                                <div className={s.numbersInfo}>Views</div>
+                                <div className={s.numbersInfo}>Просмотров</div>
                             </div>
                         </div>
                     </div>

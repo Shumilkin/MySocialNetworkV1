@@ -35,7 +35,7 @@ const Navbar = () => {
                         </div>
                         <a href="/"
                            className="d-flex text-secondary align-items-center pb-3 mb-md-0 me-md-auto  text-decoration-none ">
-                            <span className="fs-7 d-none d-sm-inline">MENU</span>
+                            <span className="fs-7 d-none d-sm-inline">МЕНЮ</span>
 
                         </a>
 
@@ -46,14 +46,14 @@ const Navbar = () => {
                                 <NavLink to="/24842" className="nav-link align-middle   pl-2" end>
                                     <CgProfile/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Profile</span>
+                                        className="ms-1 d-none d-sm-inline">Профиль</span>
                                 </NavLink>
                             </li>
                             <li className="sideBarItem">
                                 <NavLink to="/messages" className="nav-link align-middle pl-2" end>
                                     <TbMessages/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Messages</span>
+                                        className="ms-1 d-none d-sm-inline">Сообщения</span>
                                 </NavLink>
                             </li>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
                                 <NavLink to="/friends" className="nav-link align-middle pl-2" end>
                                     <FaUserFriends/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Friends</span>
+                                        className="ms-1 d-none d-sm-inline">Друзья</span>
                                 </NavLink>
                             </li>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 <NavLink to="/music" className="nav-link align-middle pl-2" end>
                                     <BsMusicPlayer/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Music</span>
+                                        className="ms-1 d-none d-sm-inline">Музыка</span>
                                 </NavLink>
                             </li>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
                                 <NavLink to="/settings" className="nav-link align-middle pl-2" end>
                                     <IoMdSettings/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Settings</span>
+                                        className="ms-1 d-none d-sm-inline">Настройки</span>
                                 </NavLink>
                             </li>
 

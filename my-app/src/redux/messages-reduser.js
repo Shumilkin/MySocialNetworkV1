@@ -6,61 +6,61 @@ const DELETE_MESSAGE = 'DELETE_MESSAGE'
 
 const initialState = {
     dialogsData: [
-        {id: 0, user: 'Nikolay'},
-        {id: 1, user: 'OLeg'},
-        {id: 2, user: 'Ivan'},
-        {id:3, user: 'Irina'},
-        {id: 4, user: 'Anton'},
-        {id: 5, user: 'Olga'}
+        {id: 0, user: 'Николай'},
+        {id: 1, user: 'Олег'},
+        {id: 2, user: 'Иван'},
+        {id:3, user: 'Ир04ка'},
+        {id: 4, user: 'Антон'},
+        {id: 5, user: 'Оля'}
     ],
     messagesData: [
         {
             id: 1, messages: [
-                {messageId: 1, message: 'True! Just when I was feeling happy that the Avengers got rid of Thanos for good, the next moment I was bawling my eyes out seeing Iron Man had sacrificed himself to save the world and everyone else.'},
-                {messageId: 2, message: 'My sister took me to see the movie as soon as it was released. Both me and my sister have been great fans of Avengers since childhood.'},
-                {messageId: 3, message: ' Oh I see. The movie stood up to all the expectations that the audience had after watching the trailer. In fact I would say the movie surpassed expectations.'},
-                {messageId: 4, message: ' We should make use of this trip to learn the maximum possible about the places we are visiting.'}]
+                {messageId: 1, message: 'Истинный! Когда я был счастлив, что Мстители навсегда избавились от Таноса, в следующий момент я выплакал глаза, увидев, что Железный Человек пожертвовал собой, чтобы спасти мир и всех остальных.'},
+                {messageId: 2, message: 'Моя сестра повела меня посмотреть фильм, как только он вышел. И я, и моя сестра с детства были большими фанатами Мстителей.'},
+                {messageId: 3, message: ' Ага, понятно. Фильм оправдал все ожидания зрителей после просмотра трейлера. На самом деле, я бы сказал, что фильм превзошел все ожидания.'},
+                {messageId: 4, message: 'Мы должны использовать эту поездку, чтобы узнать как можно больше о местах, которые мы посещаем.'}]
 
         },
         {
             id: 2, messages: [
-                {messageId: 1, message: 'Hey, Marvin. My weekend was great. I watched a great movie.'},
-                {messageId: 2, message: 'Oh really? What was the name of the movie you watched?'},
-                {messageId: 3, message: ' I watched Avengers Endgame. It is the last movie of the Avengers.'}
+                {messageId: 1, message: 'Эй, Марвин. Мои выходные были отличными. Я посмотрел отличный фильм.'},
+                {messageId: 2, message: 'Да неужели? Как назывался фильм, который ты смотрел?'},
+                {messageId: 3, message: ' Я смотрел Мстители: Финал. Это последний фильм о Мстителях.'}
             ]
 
 
         },
         {
             id: 3, messages: [
-                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
-                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
-                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
+                {messageId: 1, message: 'Мы должны использовать эту поездку, чтобы узнать как можно больше о местах, которые мы посещаем.'},
+                {messageId: 2, message: 'Мне придется просить денег у отца сегодня же.'},
+                {messageId: 3, message: ' Именно поэтому нам еще более необходимо отправиться в тур. Это будет прекрасное воспоминание.'}]
         },
         {
             id: 4, messages: [
-                {messageId: 1, message: 'True! Just when I was feeling happy that the Avengers got rid of Thanos for good, the next moment I was bawling my eyes out seeing Iron Man had sacrificed himself to save the world and everyone else.'},
-                {messageId: 2, message: 'My sister took me to see the movie as soon as it was released. Both me and my sister have been great fans of Avengers since childhood.'},
-                {messageId: 3, message: ' Oh I see. The movie stood up to all the expectations that the audience had after watching the trailer. In fact I would say the movie surpassed expectations.'},
-                {messageId: 4, message: ' We should make use of this trip to learn the maximum possible about the places we are visiting.'}]
+                {messageId: 1, message: 'Истинный! Когда я был счастлив, что Мстители навсегда избавились от Таноса, в следующий момент я выплакал глаза, увидев, что Железный Человек пожертвовал собой, чтобы спасти мир и всех остальных.'},
+                {messageId: 2, message: 'Моя сестра повела меня посмотреть фильм, как только он вышел. И я, и моя сестра с детства были большими фанатами Мстителей.'},
+                {messageId: 3, message: ' Ага, понятно. Фильм оправдал все ожидания зрителей после просмотра трейлера. На самом деле, я бы сказал, что фильм превзошел все ожидания.'},
+                {messageId: 4, message: 'Мы должны использовать эту поездку, чтобы узнать как можно больше о местах, которые мы посещаем.'}]
         },
         {
             id: 5, messages: [
-                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
-                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
-                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
+                {messageId: 1, message: 'Мы должны использовать эту поездку, чтобы узнать как можно больше о местах, которые мы посещаем.'},
+                {messageId: 2, message: 'Мне придется просить денег у отца сегодня же.'},
+                {messageId: 3, message: ' Именно поэтому нам еще более необходимо отправиться в тур. Это будет прекрасное воспоминание.'}]
         },
         {
             id: 6, messages: [
-                {messageId: 1, message: 'Hey, Marvin. My weekend was great. I watched a great movie.'},
-                {messageId: 2, message: 'Oh really? What was the name of the movie you watched?'},
-                {messageId: 3, message: ' I watched Avengers Endgame. It is the last movie of the Avengers.'}]
+                {messageId: 1, message: 'Эй, Марвин. Мои выходные были отличными. Я посмотрел отличный фильм.'},
+                {messageId: 2, message: 'Да неужели? Как назывался фильм, который ты смотрел?'},
+                {messageId: 3, message: ' Я смотрел Мстители: Финал. Это последний фильм о Мстителях.'}]
         },
         {
             id: 7, messages: [
-                {messageId: 1, message: 'We should make use of this trip to learn the maximum possible about the places we are visiting.'},
-                {messageId: 2, message: 'I will have to ask my father today itself for the money.'},
-                {messageId: 3, message: ' That is what makes it all the more necessary that we go for the tour. It will be a wonderful memory.'}]
+                {messageId: 1, message: 'Мы должны использовать эту поездку, чтобы узнать как можно больше о местах, которые мы посещаем.'},
+                {messageId: 2, message: 'Мне придется просить денег у отца сегодня же.'},
+                {messageId: 3, message: ' Именно поэтому нам еще более необходимо отправиться в тур. Это будет прекрасное воспоминание.'}]
         }
     ]
 

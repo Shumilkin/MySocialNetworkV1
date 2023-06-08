@@ -40,7 +40,7 @@ const ProfileContacts = (props) => {
 
         <div className={"pb-4  "}>
             <div className={"row row-cols-auto text-center"}>
-                <div className={"col"}><u className={s.header}>Contacts:</u></div>
+                <div className={"col"}><u className={s.header}>Контакты:</u></div>
                 <div className={"col"} onClick={() => setCount(count + 1)}>
                     {/* {count % 2 ? "Save" : "Edit"}>*/}
                     <div className={s.headerControl}><HiOutlinePencilAlt style={{height: 35, width: 35}}/></div>
