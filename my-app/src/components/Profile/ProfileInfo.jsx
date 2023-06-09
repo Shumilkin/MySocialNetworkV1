@@ -58,7 +58,7 @@ const ProfileInfo = (props) => {
 */}
         <div className={s.containerNonColor}>
             <div className={"row"}>
-                <div className={"col-8"}>
+                <div className={"col-sm-8"}>
                     <div className={s.containerHalfLeft}>
                         <ProfilePostsForm data={props}/>
                     </div>
@@ -66,7 +66,7 @@ const ProfileInfo = (props) => {
                         <ProfilePosts postsData={props.postsData} setUserProfilePost={props.setUserProfilePost}/>
                     </div>
                 </div>
-                <div className={"col-4"}>
+                <div className={"col-sm-4"}>
                     <div className={s.containerHalfRight}>
                         <ProfileContacts setProfileContacts={props.setProfileContacts}
                                          profileContacts={props.profileInfo.contacts} list={list} contacts={contacts}/>

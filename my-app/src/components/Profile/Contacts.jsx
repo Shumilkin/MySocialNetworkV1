@@ -23,10 +23,10 @@ const ProfileContacts = (props) => {
         const site = "https://" + key + ".com"
         contacts = [...contacts,
             <div className={"row  "}>
-                <div className={"col-2 m-1"}>
+                <div className={"col-3 col-lg-2"}>
                     <SocialIcon style={{height: 50, width: 50}} url={site}/>
                 </div>
-                <div className={"col-9  m-2"}>
+                <div className={"col-5 m-2 "}>
                     <div className={"input-group "}>
                         <span className="input-group-text" id="basic-addon1">
                         {(props.list[key] != null  ) ? props.list[key] : "---"}

@@ -16,7 +16,7 @@ import {BiMessageRounded} from "react-icons/bi";
 import {RiNotification2Line} from "react-icons/ri";
 import {useSelector} from 'react-redux'
 import Activities from "../Friends/Activities";
-import { useDispatch } from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {BsHouseDoor} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
 import {CgProfile} from "react-icons/cg";
@@ -34,7 +34,7 @@ function Header() {
                 <Container fluid>
                     <Navbar.Brand href="#">
                         <img className={s.mainlogo} src={logo} alt="Logo"/>
-                       <span className={s.logoText}>MSNet</span> </Navbar.Brand>
+                        <span className={s.logoText}>MSNet</span> </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"sm"}`}/>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-${"sm"}`}
@@ -43,78 +43,93 @@ function Header() {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"sm"}`}>
-                                Offcanvas
+                                Меню
                             </Offcanvas.Title>
                         </Offcanvas.Header>
 
                         <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3 align-items-center">
+                            <Nav className="justify-content-end flex-grow-1 pe-3 align-items-center  ">
                                 <Form className="d-flex">
-                                    <Form.Control
-                                        type="search"
-                                        placeholder="Поиск"
-                                        className="me-2"
-                                        aria-label="Search"
-                                    />
-                                    {/* <Button variant="outline-success">Search</Button>*/}
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Поиск"
+                                    className="me-2"
+                                    aria-label="Search"
+                                />
+                                {/* <Button variant="outline-success">Search</Button>*/}
                                 </Form>
-
                                 <Nav.Link href="#action2">
-                                    <NavLink to="/friends" className="nav-link align-middle   pl-2" end>
-                                        <FaUserFriends/>
+                                    <NavLink to="/friends" className="nav-link align-start   pl-2" end>
+                                        <FaUserFriends/> <span className={"d-sm-none"}>Друзья</span>
                                     </NavLink>
-                                    </Nav.Link>
+                                </Nav.Link>
                                 <Nav.Link href="#action2">
                                     <NavLink to="/messages" className="nav-link align-middle   pl-2" end>
-                                        <BiMessageRounded/>
+                                        <BiMessageRounded/><span className={"d-sm-none"}>Сообщения</span>
                                     </NavLink>
-                                    </Nav.Link>
+                                </Nav.Link>
+                                <Nav.Link href="#action2">
+                                    <NavDropdown
+                                        align="end"
+                                        title=<div>
+                                        <RiNotification2Line
+                                            className={"d-inline"}/>
+                                        <span className={"d-sm-none"}>Уведомления</span>
+        </div>
+id={`offcanvasNavbarDropdown-expand-${"sm"}`}
+>
+    <div className={s.activitiesContainer}>
+        <Activities/>
+    </div>
+</NavDropdown>
+</Nav.Link>
 
-                                <NavDropdown
-                                    align="end"
-                                    title=<RiNotification2Line/>
-                                    id={`offcanvasNavbarDropdown-expand-${"sm"}`}
-                                >
-                                    <div className={s.activitiesContainer}>
-                                        <Activities/>
-                                    </div>
-                                </NavDropdown>
+{/*<NavDropdown
+                                align="end"
+                                title=<RiNotification2Line/>
+                            id={`offcanvasNavbarDropdown-expand-${"sm"}`}
+                            >
+                            <div className={s.activitiesContainer}>
 
-                                <NavDropdown
-                                    align="end"
-                                    title=<img className={ s.profileLogo} src={profileLogo} alt="Logo"/>
-                                    id={`offcanvasNavbarDropdown-expand-${"sm"}`}
-                                    className={"dropleft"}
-                                >
+                                <Activities/>
+                            </div>
+                        </NavDropdown><span className={"d-sm-none"}>dfdfdf</span>*/}
 
-                                 {/*   <NavDropdown.Item href="#action3">
+    <NavDropdown
+        align="end"
+        title=<img className={s.profileLogo} src={profileLogo} alt="Logo"/>
+id={`offcanvasNavbarDropdown-expand-${"sm"}`}
+className={"dropleft"}
+>
+
+{/*   <NavDropdown.Item href="#action3">
                                         <HeaderDropDown/>
                                     </NavDropdown.Item>*/}
-                                    <NavDropdown.Item ><NavLink to="/" className="nav-link align-middle   pl-2" end>
-                                        В профиль <AiOutlineUser/>
-                                    </NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
-                                        Другое действие
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Divider/>
-                                    <NavDropdown.Item onClick={()=>dispatch(takeLogoutData())}>
-                                        <BsHouseDoor/> Выйти
-                                    </NavDropdown.Item>
+    <NavDropdown.Item><NavLink to="/" className="nav-link align-middle   pl-2" end>
+        В профиль <AiOutlineUser/>
+    </NavLink></NavDropdown.Item>
+    <NavDropdown.Item href="#action4">
+        Другое действие
+    </NavDropdown.Item>
+    <NavDropdown.Divider/>
+    <NavDropdown.Item onClick={() => dispatch(takeLogoutData())}>
+        <BsHouseDoor/> Выйти
+    </NavDropdown.Item>
 
-                                </NavDropdown>
-                               {/* <Nav.Link href="#action2">
+</NavDropdown>
+{/* <Nav.Link href="#action2">
                                     <img className={ s.profileLogo} src={profileLogo} alt="Logo"/>
                                 </Nav.Link>*/}
-                            </Nav>
+</Nav>
 
-                        </Offcanvas.Body>
-                    </Navbar.Offcanvas>
-                </Container>
-            </Navbar>
+</Offcanvas.Body>
+</Navbar.Offcanvas>
+</Container>
+</Navbar>
 
 
-        </div>
-    );
+</div>
+);
 }
 
 

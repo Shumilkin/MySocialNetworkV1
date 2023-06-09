@@ -50,6 +50,13 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li className="sideBarItem">
+                                <NavLink to="/friends" className="nav-link align-middle pl-2" end>
+                                    <FaUserFriends/>
+                                    <span
+                                        className="ms-1 d-none d-sm-inline">Друзья</span>
+                                </NavLink>
+                            </li>
+                            <li className="sideBarItem">
                                 <NavLink to="/messages" className="nav-link align-middle pl-2" end>
                                     <TbMessages/>
                                     <span
@@ -57,13 +64,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
 
-                            <li className="sideBarItem">
-                                <NavLink to="/friends" className="nav-link align-middle pl-2" end>
-                                    <FaUserFriends/>
-                                    <span
-                                        className="ms-1 d-none d-sm-inline">Друзья</span>
-                                </NavLink>
-                            </li>
+
 
                             <li className="sideBarItem">
                                 <NavLink to="/music" className="nav-link align-middle pl-2" end>
