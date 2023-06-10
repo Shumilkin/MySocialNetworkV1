@@ -30,7 +30,7 @@ const PaginationP = (props) => {
                                 }>{num}</Pagination.Item>
     }) 
     return <div>
-        <Pagination>
+        <Pagination size="sm">
             <Pagination.First onClick={() => setTempCurrentPage(0)}/>
             {tempCurrentPage == 0 ? null : <Pagination.Prev onClick={() => setTempCurrentPage(tempCurrentPage - 10)}/>}
             {arr}

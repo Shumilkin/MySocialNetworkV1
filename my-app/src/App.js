@@ -12,7 +12,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {getProfileStatus, setUserProfile} from "./redux/profile-reduser";
 import {connect, useDispatch} from "react-redux";
-import { useEffect  } from 'react';
+import {useEffect, useState} from 'react';
 import LoginPage from "./components/Login/LoginPage";
 import {getAuthData, setAuthData, takeAuthData, takeCaptcha, takelogoutData} from "./redux/auth-reducer";
 import ReactSlickDemo from './components/Profile/ProfileCarousel'
@@ -30,17 +30,15 @@ props.setUserProfile(userId)
 
 function App(props) {
     let  userId  = window.location.pathname.substring(1)
+    const [count, setCount] =useState(true);
 const dispatch = useDispatch()
-
    useEffect(() => {
-
        /*props.getProfileStatus(userId)*/
        props.takeAuthData()
        props.takeCaptcha()
 dispatch(setUserProfile(24842))
-
     });
-
+let piska = (props) => {return alert('piska')}
     if (props.isAuth === false ){ return         <BrowserRouter>
             <CountStateContext.Provider value="test">
                 <div >
@@ -55,9 +53,11 @@ dispatch(setUserProfile(24842))
     return (
         <BrowserRouter>
             <CountStateContext.Provider value="test">
-                <div className='wrapper'>
-                    <Header/>
-                    <Sidebar/>
+                <div className={count == true ?  "wrapper" : "wrapperClose"}  >
+
+                    <Header  setCount={setCount} count={count}/>
+
+                    <Sidebar piska={piska} />
                     <Routes>
                         <Route path='/:id' element={<ProfileContainer/>}/>
                         <Route path="/" element={<ProfileContainer />} />

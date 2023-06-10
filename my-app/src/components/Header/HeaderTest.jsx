@@ -19,11 +19,13 @@ import Activities from "../Friends/Activities";
 import {useDispatch} from 'react-redux'
 import {BsHouseDoor} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
-import {CgProfile} from "react-icons/cg";
+
 import {AiOutlineUser} from "react-icons/ai";
 
+import {BsChevronDown} from "react-icons/bs";
 
-function Header() {
+
+function Header(props) {
     const profileLogo = useSelector((state) => state.profilePage.profileInfo.photos.small)
     const dispatch = useDispatch()
 
@@ -32,6 +34,7 @@ function Header() {
 
             <Navbar bg="light" expand={"sm"} className="mb-3">
                 <Container fluid>
+                    <a className={!props.count ? s.arrow : s.arrowClose} onClick={()=> {props.setCount(!props.count)}}><BsChevronDown/></a>
                     <Navbar.Brand href="#">
                         <img className={s.mainlogo} src={logo} alt="Logo"/>
                         <span className={s.logoText}>MSNet</span> </Navbar.Brand>

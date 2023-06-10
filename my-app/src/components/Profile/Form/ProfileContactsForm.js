@@ -107,7 +107,7 @@ const ProfileContactsForm = withFormik({
             Object.assign(listOfContacts, {[key]: values[key2]});
             /*listOfContacts = { [key] :values[key2]}*/
         }
-        debugger
+
         props.setProfileContacts({
             lookingForAJob: true,
             lookingForAJobDescription: "test",

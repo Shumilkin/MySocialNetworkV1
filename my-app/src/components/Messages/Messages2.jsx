@@ -32,7 +32,7 @@ const Messages = (props) => {
     return <div classname={s.area}>
         <div className={s.messagesBG}>
             <div className={"row p-3"}>
-                <div className={"col-4"}>
+                <div className={"col-lg-4"}>
                     <div className={s.containerHalfLeft}>
                         <div className={"d-flex"}>
                             <Form.Control placeholder="Введите имя ..." type="textarea"
@@ -46,7 +46,7 @@ const Messages = (props) => {
                     {/*  <div className={s.containerHalfLeft}>
             </div>*/}
                 </div>
-                <div className={"col-8"}>
+                <div className={"col-lg-8"}>
 
                     <div className={s.userDialogContainer} onClick={props.onClick}>
                         <div className={"d-flex"}>

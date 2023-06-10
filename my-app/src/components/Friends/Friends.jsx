@@ -38,13 +38,13 @@ const Friends = (props) => {
         const userLink = '/' + user.id
         return <div className={s.userContainer}>
             <div className="row">
-                <div className="col-sm-1">
+                <div className="col-lg-2">
                     <NavLink to={userLink} end> <img className={s.logo}
                                                      src={user.photos.small == null ? userlogo : user.photos.small}/>
                     </NavLink>
 
                 </div>
-                <div className="col">
+                <div className="col-sm-5">
                     <div className={s.userInfoContainer}>
                         <div className={s.userName}>{user.name}</div>
                         {user.status ? <li> {user.status}</li> : null}
@@ -54,7 +54,7 @@ const Friends = (props) => {
 
                     </div>
                 </div>
-                <div className="col text-end align-text-center">
+                <div className="col-lg-4 text-lg-end  text-sm-start align-text-center">
                     {user.followed != true
                         ? <Button className={s.followBtn} variant="primary" onClick={() => {
                             props.followUser(user.id)
@@ -71,62 +71,62 @@ const Friends = (props) => {
     })
 
     return <div classname={st.area}>
-        <div className={st.area}>
-            <div className={st.messagesBG}>
-                <div className={"row p-3"}>
-                    <div className={"col-8"}>
-                        <div className={st.containerHalfLeft}>
-                            <FriendsForm getUsersData={props.getUsersData} setPage={props.setPage} friend={props.friend}
-                                         setFriend={props.setFriend}/>
-                        </div>
-                        <div className={st.containerHalfRight}>
-                            <div className={s.navigation}>
-                                <div className={"d-flex align-items-start"}>
-                                    <div className={props.friend == true ? s.friendsTogler : s.friendsToglerActive}>
-                                        Все пользователи
-                                    </div>
-                                    <Switch
-                                        isOn={props.friend}
-                                        handleToggle={() => {
-                                            props.setFriend(props.friend == true ? null : true)
-                                            setValue(props.friend)
 
-                                            props.getUsersData(10, 1, '', value)
-                                        }}
-                                    />
-                                    <div className={props.friend == true ? s.friendsToglerActive : s.friendsTogler}>
-                                        Мои друзья <Badge pill bg="success">{friendsNumber}</Badge>
-                                    </div>
+        <div className={st.messagesBG}>
+            <div className={"row p-3"}>
+                <div className={"col-sm-8"}>
+                    <div className={st.containerHalfLeft}>
+                        <FriendsForm getUsersData={props.getUsersData} setPage={props.setPage} friend={props.friend}
+                                     setFriend={props.setFriend}/>
+                    </div>
+                    <div className={st.containerHalfRight}>
+                        <div className={s.navigation}>
+                            <div className={"d-flex align-items-start"}>
+                                <div className={props.friend == true ? s.friendsTogler : s.friendsToglerActive}>
+                                    Все пользователи
                                 </div>
+                                <Switch
+                                    isOn={props.friend}
+                                    handleToggle={() => {
+                                        props.setFriend(props.friend == true ? null : true)
+                                        setValue(props.friend)
 
+                                        props.getUsersData(10, 1, '', value)
+                                    }}
+                                />
+                                <div className={props.friend == true ? s.friendsToglerActive : s.friendsTogler}>
+                                    Мои друзья <Badge pill bg="success">{friendsNumber}</Badge>
+                                </div>
                             </div>
-                            {usersList}
-                            <PaginationP totalCount={props.totalCount} getUsersData={props.getUsersData}
-                                         searchName={props.searchName}
-                                         page={props.page} friend={props.friend}/>
 
                         </div>
+                        {usersList}
+                        <PaginationP totalCount={props.totalCount} getUsersData={props.getUsersData}
+                                     searchName={props.searchName}
+                                     page={props.page} friend={props.friend}/>
 
                     </div>
 
-                    <div className={"col-4"}>
+                </div>
 
-                        <div className={s.activeUserInfoContainer} onClick={props.onClick}>
-                            <div className={s.activeUsers}>
-                                <span>Активные пользователи</span>
-                                                            </div>
-                            <div className={s.activeUserInfo}> Нет недавно активных участников</div>
-                        </div>
-                        <div className={s.activeUserInfoContainer} onClick={props.onClick}>
-                            <div className={s.activeUsers}>
-                                <span>Последние события</span>
-                            </div>
-                            <div className={s.activeUserInfo}> <Activities/></div>
-                        </div>
+                <div className={"col-sm-4"}>
 
+                    <div className={s.activeUserInfoContainer} onClick={props.onClick}>
+                        <div className={s.activeUsers}>
+                            <span>Активные пользователи</span>
+                        </div>
+                        <div className={s.activeUserInfo}> Нет недавно активных участников</div>
                     </div>
+                    <div className={s.activeUserInfoContainer} onClick={props.onClick}>
+                        <div className={s.activeUsers}>
+                            <span>Последние события</span>
+                        </div>
+                        <div className={s.activeUserInfo}><Activities/></div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
 
 

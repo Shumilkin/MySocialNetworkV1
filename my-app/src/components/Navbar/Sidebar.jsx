@@ -9,16 +9,18 @@ import {useSelector} from "react-redux";
 import {MdVerifiedUser} from "react-icons/md";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     const profileLogo = useSelector((state) => state.profilePage.profileInfo.photos.small)
     const fullName = useSelector((state) => state.profilePage.profileInfo.fullName)
-    return <div className={s.nav}>
-        <div className="container-fluid">
+    const setIsOpenBar = () => props.setIsOpenBar(false)
+
+    return <div   className={s.nav}>
+        <div  className="container-fluid">
             <div className="row flex-nowrap">
-                <div className=" bg-primery text-secondary">
+                <div  className=" bg-primery text-secondary">
                     <div
                         className="d-flex text-secondary flex-column align-items-center align-items-stretch px-3 pt-2  min-vh-100  ">
-                        <div className={s.profileInfoContainer}>
+                        <div   className={s.profileInfoContainer}>
                         <div className={"d-flex align-items-center"}>
 
                                 <div>
@@ -28,6 +30,7 @@ const Navbar = () => {
                                     <span className={s.sidebarName}>{fullName} <MdVerifiedUser
                                         style={{color: 'blue', height: '15px'}}/></span>
                                     <span className={s.sidebarSite}>@shumila</span>
+
                                 </div>
 
                             </div>
@@ -46,21 +49,21 @@ const Navbar = () => {
                                 <NavLink to="/24842" className="nav-link align-middle   pl-2" end>
                                     <CgProfile/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Профиль</span>
+                                        className="ms-1  d-sm-inline">Профиль</span>
                                 </NavLink>
                             </li>
                             <li className="sideBarItem">
                                 <NavLink to="/friends" className="nav-link align-middle pl-2" end>
                                     <FaUserFriends/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Друзья</span>
+                                        className="ms-1  d-sm-inline">Друзья</span>
                                 </NavLink>
                             </li>
                             <li className="sideBarItem">
                                 <NavLink to="/messages" className="nav-link align-middle pl-2" end>
                                     <TbMessages/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Сообщения</span>
+                                        className="ms-1  d-sm-inline">Сообщения</span>
                                 </NavLink>
                             </li>
 
@@ -70,7 +73,7 @@ const Navbar = () => {
                                 <NavLink to="/music" className="nav-link align-middle pl-2" end>
                                     <BsMusicPlayer/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Музыка</span>
+                                        className="ms-1  d-sm-inline">Музыка</span>
                                 </NavLink>
                             </li>
 
@@ -78,7 +81,7 @@ const Navbar = () => {
                                 <NavLink to="/settings" className="nav-link align-middle pl-2" end>
                                     <IoMdSettings/>
                                     <span
-                                        className="ms-1 d-none d-sm-inline">Настройки</span>
+                                        className="ms-1  d-sm-inline">Настройки</span>
                                 </NavLink>
                             </li>
 

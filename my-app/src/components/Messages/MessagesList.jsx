@@ -27,7 +27,7 @@ const MessagesList = (props) => {
 
         </div>
     }
-    debugger
+
     let MessagesListData = <div className={s.messagesContainer}>
         <ul>
             {props.messagesData[props.value].messages.map(item => (

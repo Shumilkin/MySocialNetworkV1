@@ -1,9 +1,7 @@
 
 .nav {
     grid-area: n;
-
-border-radius: 1px solid red;
-}
+    }
 .sidebarButton{
     text-decoration: none;
     color: grey;
@@ -34,4 +32,8 @@ border-radius: 50%;}
     border-bottom:1px solid lightgrey;
     padding-bottom:15px;
     margin-bottom: 15px;
+
+}
+.sidebarCloser{
+    right:-15px;
 }
