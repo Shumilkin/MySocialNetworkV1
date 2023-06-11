@@ -11,13 +11,16 @@ import Form from "react-bootstrap/Form";
 import DialogItem from "./DialogItem";
 import UserItem from "./UserItem";
 import profileLogo from "../../media/uzerlogo.png";
+import {BsChevronDown} from "react-icons/bs";
 
 const Messages = (props) => {
     const [value, setValue] = useState(0);
+    const [count, setCount] = useState(false)
     let DialogsList = <ul>
         {props.dialogsData.map(item => (
             /* <li key={item.id} onClick={()=> {setValue(item.id)}}>{item.user} </li>*/
-            <UserItem  onClick={() => {
+            <UserItem onClick={() => {
+                setCount(!count)
                 setValue(item.id)
             }} name={item.user} itemId={item.id} value={value}/>
         ))}
@@ -32,7 +35,8 @@ const Messages = (props) => {
     return <div classname={s.area}>
         <div className={s.messagesBG}>
             <div className={"row p-3"}>
-                <div className={"col-lg-4"}>
+                <div className={count ? "col-lg-4 order-2 d-none d-lg-block" : "col-lg-4 order-1"}>
+
                     <div className={s.containerHalfLeft}>
                         <div className={"d-flex"}>
                             <Form.Control placeholder="Введите имя ..." type="textarea"
@@ -46,8 +50,13 @@ const Messages = (props) => {
                     {/*  <div className={s.containerHalfLeft}>
             </div>*/}
                 </div>
-                <div className={"col-lg-8"}>
-
+                <div className={count ? "col-lg-8 order-1  " : "col-lg-8 order-2    d-none d-lg-block"}>
+                    <div className={s.trans}>
+                        <div className={"d-block d-lg-none" }>
+                    <a className={s.closeArrow} onClick={() => {
+                        setCount(!count)
+                    }}> <BsChevronDown/></a>
+                        </div>
                     <div className={s.userDialogContainer} onClick={props.onClick}>
                         <div className={"d-flex"}>
                             <div className={"p-1"}>
@@ -60,19 +69,18 @@ const Messages = (props) => {
                         </div>
                     </div>
 
-                    <div className={s.containerHalfRight}>
-                        <MessagesList messagesData={props.messagesData} deleteMessage={props.deleteMessage}
-                                      value={value}/>
+                        <div className={s.containerHalfRight}>
+                            <MessagesList messagesData={props.messagesData} deleteMessage={props.deleteMessage}
+                                          value={value}/>
 
-                    </div>
+                        </div>
+
                     <div className={s.containerHalfLeft}>
                         <MessagesForm setDialogsMessage={props.getDialogsMessage} value={value}/>
 
                     </div>
 
-                    {/*<div className={s.containerHalfRight}>
-                <MessagesList messagesData={props.messagesData}  deleteMessage={props.deleteMessage} value={value}/>
-            </div>*/}
+                    </div>
 
                 </div>
 
