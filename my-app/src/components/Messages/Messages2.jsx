@@ -35,7 +35,7 @@ const Messages = (props) => {
     return <div classname={s.area}>
         <div className={s.messagesBG}>
             <div className={"row p-3"}>
-                <div className={count ? "col-lg-4 order-2 d-none d-lg-block" : "col-lg-4 order-1"}>
+                <div className={count ? "col-lg-4 order-2 order-lg-1 d-none d-lg-block" : "col-lg-4 order-1 "}>
 
                     <div className={s.containerHalfLeft}>
                         <div className={"d-flex"}>

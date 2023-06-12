@@ -38,23 +38,28 @@ const Friends = (props) => {
         const userLink = '/' + user.id
         return <div className={s.userContainer}>
             <div className="row">
-                <div className="col-lg-2">
-                    <NavLink to={userLink} end> <img className={s.logo}
-                                                     src={user.photos.small == null ? userlogo : user.photos.small}/>
-                    </NavLink>
+                <div className={"col-sm-8"}>
+                    <div className={"row"}>
+                        <div className="col-2 ">
+                            <NavLink to={userLink} end> <img className={s.logo}
+                                                             src={user.photos.small == null ? userlogo : user.photos.small}/>
+                            </NavLink>
 
-                </div>
-                <div className="col-sm-5">
-                    <div className={s.userInfoContainer}>
-                        <div className={s.userName}>{user.name}</div>
-                        {user.status ? <li> {user.status}</li> : null}
-                        <span> <CiLocationOn style={{color: 'grey', size: '50px'}}/> Россия</span>
-                        <span> <BsCalendar2Week style={{color: 'grey', size: '50px'}}/> 4 часа назад</span>
+                        </div>
+                        <div className="col-10">
+                            <div className={s.userInfoContainer}>
+                                <div className={s.userName}>{user.name}</div>
+                                {user.status ? <li> {user.status}</li> : null}
+                                <span> <CiLocationOn style={{color: 'grey', size: '50px'}}/> Россия</span>
+                                <span> <BsCalendar2Week style={{color: 'grey', size: '50px'}}/> 4 часа назад</span>
 
 
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="col-lg-4 text-lg-end  text-sm-start align-text-center">
+
+                <div className="col-sm-4 text-lg-end  text-sm-start align-text-center">
                     {user.followed != true
                         ? <Button className={s.followBtn} variant="primary" onClick={() => {
                             props.followUser(user.id)
